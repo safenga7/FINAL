@@ -1,153 +1,117 @@
-body{
-    background-color: #426c5f;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+body{
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+/* navbar  */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    background-color: #ffffff; 
-    box-shadow: 0 4px 6px #dadada;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    z-index: 1000;
+    position: absolute;
+    top: 20px;
+    color: #fff;
+    z-index: 99;
 }
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .navbar-brand {
     display: flex;
+    justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    gap: 15px;
+}
+.navbar-brand .logo-navbar {
+    width: 50px;
+}
+.navbar-brand span {
+    font-size: 35px;
+    line-height: 45px;
     font-weight: bold;
-    color: #000000;
-    text-decoration: none;
+    color: #00C9FF;
 }
-
-.navbar-brand img {
-    margin-right: 10px;
+.navbar .nav-item {
+    padding: 0 10px;
 }
-
-.navbar-row {
-    display: flex;
-    align-items: center;
+.navbar .nav-item a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    transition: 0.3s all ease;
 }
-
-.navbar-col {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.navbar .nav-item:hover a {
+    color: #00C9FF;
+    transform: translateY(-2px);
 }
-
-.navbar-col li {
-    margin-left: 20px;
+.button-nav {
+    background-color: #000; 
+    border-radius: 100px;
+    padding: 3px 10px !important;
+    margin-left: 10px;
+    transition:  0.3s all ease;   
 }
-
-.nav-link {
-    font-size: 1rem;
-    color: #000000; 
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
+.button-nav:hover {
+    background-color: #00C9FF; 
+    transform: translateY(-2px);
 }
-
-.nav-link:hover {
-    color: #396859;
+.button-nav:hover a {
+    color: #fff !important;
+    transform: translateY(0) !important;
 }
-
-.btn-primary {
-    background-color: #ffffff; /* أزرق غامق */
-    color: #000000;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #000000; 
-}
-
-/* تحسين تنسيق القسم الرئيسي */
+/* header  */
 #header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 100px 20px;
+    padding: 150px 15px;
     max-width: 900px;
     margin: 0 auto;
 }
-
 #header h1 {
-    font-size: 2.5rem;
+    font-size: 50px;
+    line-height: 1.2em;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #ffffff; 
+    color: #00C9FF; 
+    text-align: center;
 }
-
 #header p {
-    font-size: 1.2rem;
+    font-size: 16px;
     font-weight: 400;
-    color: #ffffff; /* رمادي */
+    line-height: 26px;
+    color: #00C9FF; 
     margin-bottom: 30px;
+    text-align: center;
 }
-
 #header .btn-primary {
     font-size: 1.2rem;
     padding: 12px 24px;
     margin-bottom: 15px;
 }
-
-/* تحسين إدخال البريد الإلكتروني */
-.form-input {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    background-color: #d1cfcf; /* رمادي فاتح */
-    color: #2E3B32; /* أخضر غامق */
-}
-
-.form-checkbox {
-    transform: scale(1.2);
-}
-
-.text-muted {
-    font-size: 0.9rem;
-    color: #bebebe; /* رمادي */
-}
-
-/* إزالة زر "Открыть меню панели навигации" */
-.navbar-btn {
-    display: none;
-}
 .img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* المسافة بين الصور */
+    gap: 20px;
+    margin-bottom: 50px;
 }
-
-.A, .B {
+.header-image-ai {
+    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+}
+.header-image-ai:hover .first-image,
+.header-image-ai:hover .second-image  {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.first-image, .second-image {
     border-radius: 50%;
     height: 400px;
     width: 400px;
-    margin: 50px; /* إزالة الهوامش الفردية السابقة */
+    margin: 50px;
+
 }
 .subscription-container {
     display: flex;
