@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="49px" viewBox="0 0 49 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>5AEDED64-0BBC-4AEB-BCC8-82BBBF25BB17</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-48.000000, -409.000000)">
+            <g id="Icon_12@1x-Copy-2" transform="translate(49.000000, 410.000000)">
+                <g id="Icon_Arrow" transform="translate(7.250000, 7.250000)" fill-rule="nonzero">
+                    <rect id="Container" fill="#D8D8D8" opacity="0" x="0" y="0" width="32" height="32"></rect>
+                    <g id="Icon" transform="translate(10.626250, 7.626250)" fill="#03839B">
+                        <path d="M9.43875,14.19375 L3.61875,8.37375 L9.43875,2.55375 C10.02375,1.96875 10.02375,1.02375 9.43875,0.43875 C8.85375,-0.14625 7.90875,-0.14625 7.32375,0.43875 L0.43875,7.32375 C-0.14625,7.90875 -0.14625,8.85375 0.43875,9.43875 L7.32375,16.32375 C7.90875,16.90875 8.85375,16.90875 9.43875,16.32375 C10.00875,15.73875 10.02375,14.77875 9.43875,14.19375 Z" id="Path"></path>
+                    </g>
+                </g>
+                <circle id="Oval" stroke="#03839B" stroke-width="1.5" cx="23.25" cy="23.25" r="23.25"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

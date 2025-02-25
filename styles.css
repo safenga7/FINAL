@@ -1,0 +1,215 @@
+body{
+    background-color: #426c5f;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 6px #dadada;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-row {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-col {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-col li {
+    margin-left: 20px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: #000000; 
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #396859;
+}
+
+.btn-primary {
+    background-color: #ffffff; /* أزرق غامق */
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #000000; 
+}
+
+/* تحسين تنسيق القسم الرئيسي */
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff; 
+}
+
+#header p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ffffff; /* رمادي */
+    margin-bottom: 30px;
+}
+
+#header .btn-primary {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    margin-bottom: 15px;
+}
+
+/* تحسين إدخال البريد الإلكتروني */
+.form-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #d1cfcf; /* رمادي فاتح */
+    color: #2E3B32; /* أخضر غامق */
+}
+
+.form-checkbox {
+    transform: scale(1.2);
+}
+
+.text-muted {
+    font-size: 0.9rem;
+    color: #bebebe; /* رمادي */
+}
+
+/* إزالة زر "Открыть меню панели навигации" */
+.navbar-btn {
+    display: none;
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* المسافة بين الصور */
+}
+
+.A, .B {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    margin: 50px; /* إزالة الهوامش الفردية السابقة */
+}
+.subscription-container {
+    display: flex;
+    gap: 20px;
+}
+.subscription-plan {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+.subscription-plan h2 {
+    font-size: 22px;
+    color: #333;
+}
+.subscription-plan h3 {
+    color: #e63946;
+    font-size: 28px;
+    margin: 10px 0;
+}
+.subscription-plan p {
+    color: #555;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.subscription-plan ul {
+    text-align: left;
+    padding: 0;
+    list-style: none;
+}
+.subscription-plan ul li {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+.subscription-plan ul li:before {
+    content: '\2713';
+    color: green;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.subscription-plan .not-included:before {
+    content: '\2717';
+    color: red;
+}
+.subscription-plan button {
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.subscription-plan button:hover {
+    background-color: #21867a;
+}
+
+
+
+
+
