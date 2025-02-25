@@ -1,4 +1,4 @@
-import { sequelize } from './config/db.js';
+import { sequelize } from './src/config/db.js';
 
 sequelize.sync({ force: true }) // force: true سيقوم بحذف الجداول وإعادة إنشائها
   .then(() => {
