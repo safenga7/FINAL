@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "d:\\ryadom\\FINAL\\index.html"
+            "file": "/Users/ahmed/Desktop/FINAL/index.html"
         }
     ]
 }
