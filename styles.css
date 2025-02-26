@@ -1,13 +1,15 @@
-body{
-    background-color: #426c5f;
+body {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
+    background-attachment: fixed;
+    
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background-color: #ffffff; 
-    box-shadow: 0 4px 6px #dadada;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
@@ -26,16 +28,25 @@ body{
 }
 
 .navbar-brand {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
+    color: white; /* جعل النص أبيض */
     font-weight: bold;
-    color: #000000;
-    text-decoration: none;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none; /* إزالة الخط تحت النص */
+    pointer-events: none; /* منع النقر */
 }
 
+.navbar-brand:hover {
+    color: #a5c9ff; /* لون مميز عند التمرير */
+}
+
+
 .navbar-brand img {
-    margin-right: 10px;
+    filter: brightness(0) invert(1); /* تحويل اللوجو للأبيض */
+    width: 40px; /* ضبط الحجم */
+    height: auto;
 }
 
 .navbar-row {
@@ -56,19 +67,21 @@ body{
 
 .nav-link {
     font-size: 1rem;
-    color: #000000; 
+    color: white; /* جعل الروابط بيضاء لتكون واضحة */
+    transition: color 0.3s;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s;
+   
 }
 
 .nav-link:hover {
-    color: #396859;
+    color: #a5c9ff
 }
 
 .btn-primary {
-    background-color: #ffffff; /* أزرق غامق */
-    color: #000000;
+    background-color: #60a5fa;
+    color: white;
+    border: none;
     padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
@@ -77,7 +90,7 @@ body{
 }
 
 .btn-primary:hover {
-    background-color: #000000; 
+    background-color: #3b82f6;
 }
 
 /* تحسين تنسيق القسم الرئيسي */
@@ -98,12 +111,6 @@ body{
     color: #ffffff; 
 }
 
-#header p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #ffffff; /* رمادي */
-    margin-bottom: 30px;
-}
 
 #header .btn-primary {
     font-size: 1.2rem;
@@ -142,6 +149,15 @@ body{
     align-items: center;
     gap: 20px; /* المسافة بين الصور */
 }
+.img-container img {
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    cursor: pointer; /* لجعل المؤشر يظهر كيد عند التحويم */
+}
+
+.img-container img:hover {
+    transform: scale(1.1) rotateY(10deg); /* تكبير بنسبة 10% مع ميلان */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* ظل جميل */
+}
 
 .A, .B {
     border-radius: 50%;
@@ -152,50 +168,83 @@ body{
 .subscription-container {
     display: flex;
     gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 50px; /* إضافة مسافة علوية */
 }
+
 .subscription-plan {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px;
-    text-align: center;
+    text-align: left; /* ضبط النص ليبدأ من نفس الموضع */
     border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .subscription-plan h2 {
     font-size: 22px;
     color: #333;
+    margin-bottom: 0px;
+    text-align: center; /* بقاء العنوان في المنتصف */
 }
+
 .subscription-plan h3 {
     color: #e63946;
     font-size: 28px;
-    margin: 10px 0;
+    margin: 0px 0;
+    text-align: center; /* بقاء السعر في المنتصف */
 }
-.subscription-plan p {
-    color: #555;
-    font-size: 16px;
-    margin: 10px 0;
+
+.subscription-container p {
+    font-size: 1rem;
+    font-weight: 200;
+    color: #e0b300; /* لون النص */
+    margin-bottom: 10px;
+    text-align: center;
 }
+
+.subscription-container p:before {
+    content: '\2605';  /* رمز ★ */
+    color: gold;  /* لون النجمة */
+    margin-right: 5px;
+}
+
 .subscription-plan ul {
     text-align: left;
     padding: 0;
     list-style: none;
+    flex-grow: 1;
 }
+
 .subscription-plan ul li {
     margin: 5px 0;
     display: flex;
     align-items: center;
 }
+
 .subscription-plan ul li:before {
     content: '\2713';
     color: green;
     font-weight: bold;
     margin-right: 10px;
 }
+
 .subscription-plan .not-included:before {
     content: '\2717';
     color: red;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* يجعل الزر يكون دائمًا في الأسفل */
+}
+
 .subscription-plan button {
     background-color: #2a9d8f;
     color: white;
@@ -203,13 +252,30 @@ body{
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 15px;
+    width: 50%;
 }
+.PH{
+    color: floralwhite;
+}
+
 .subscription-plan button:hover {
     background-color: #21867a;
 }
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
 
-
+.typing-effect {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    font-size: 2rem; /* تكبير الخط */
+    text-align: center; /* توسيط النص */
+    max-width: 600px; /* تحديد عرض معين */
+    animation: typing 3s steps(40, end) forwards;
+}
 
 
 
