@@ -9,6 +9,50 @@ body {
     padding: 0;
     flex-direction: column;
 }
+.background-element {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 10s infinite alternate ease-in-out;
+    filter: blur(10px);
+}
+
+/* مواقع عشوائية للعناصر */
+.background-element:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-duration: 8s;
+}
+.background-element:nth-child(2) {
+    top: 50%;
+    left: 70%;
+    animation-duration: 12s;
+}
+.background-element:nth-child(3) {
+    top: 80%;
+    left: 30%;
+    animation-duration: 10s;
+}
+@keyframes glow {
+    from {
+        background: rgba(255, 255, 255, 0.2);
+    }
+    to {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* تحريك العناصر */
+@keyframes float {
+    from {
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-50px) scale(1.2);
+    }
+}
 /* اللوجو */
 header {
     width: 100%;
@@ -23,138 +67,8 @@ header {
     display: flex;
     align-items: center;
 }
-
-.logolog img {
-    width: 50px;
-    margin-right: 10px;
-}
-
-/* الشات */
-.chat-container {
-    width: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    height: 70vh;
-    overflow: hidden;
-    position: relative;
-}
-
-/* صندوق الرسائل */
-.chat-box {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* الرسائل */
-.message {
-    max-width: 80%;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-}
-
-/* رسالة البوت */
-.message.bot {
-    background: rgba(255, 255, 255, 0.2);
-    align-self: flex-start;
-}
-
-.message.bot img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-/* رسالة المستخدم */
-.message.user {
-    background: rgba(0, 255, 150, 0.3);
-    align-self: flex-end;
-    text-align: right;
-}
-
-/* إدخال المستخدم */
-.chat-input {
-    display: flex;
-    margin-top: 10px;
-}
-
-.chat-input input {
-    flex-grow: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-}
-
-.chat-input button {
-    background: #3a7bd5;
-    border: none;
-    padding: 10px 15px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
-    backdrop-filter: blur(10px);
-    color: white;
-    margin-top: 120px;
-}
-
-.logo img {
-    width: 100px;
-}
-
 h2 {
     margin-bottom: 15px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.forgot-password {
-    display: block;
-    margin-top: 10px;
-    color: white;
-    text-decoration: none;
-}
-
-.create-account {
-    background-color: #008CBA;
-    margin-top: 15px;
-}
-
-.bottom-logo {
-    margin-top: 20px;
 }
 .navbar {
     display: flex;
@@ -421,73 +335,433 @@ button {
 
 .typing-effect {
     display: inline-block;
-    white-space: nowrap;
+    white-space: nowrap; /* يمنع انكسار النص */
     overflow: hidden;
     width: 0;
-    font-size: 2rem; /* تكبير الخط */
-    text-align: center; /* توسيط النص */
-    max-width: 600px; /* تحديد عرض معين */
-    animation: typing 3s steps(40, end) forwards;
+    font-size: 2rem;
+    text-align: center;
+    max-width: 1500px;
+    animation: typing 3s steps(30, end) forwards, blink 0.8s infinite;
 }
 
+@keyframes blink {
+    50% { opacity: 0.6; transform: scale(1.02); }
+}
+/* تغليف كل شيء داخل login-wrapper */
+/* ✅ خلفية مع عناصر متحركة */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
 
+/* ✅ الفقاعات المتحركة */
+.bubble {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: float 10s infinite alternate ease-in-out, glow 3s infinite alternate;
+}
+
+/* 🔥 توزيع الفقاعات في أماكن مختلفة */
+.bubble:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-duration: 12s;
+}
+.bubble:nth-child(2) {
+    top: 50%;
+    left: 70%;
+    animation-duration: 10s;
+}
+.bubble:nth-child(3) {
+    top: 80%;
+    left: 30%;
+    animation-duration: 14s;
+}
+.bubble:nth-child(4) {
+    top: 30%;
+    left: 80%;
+    animation-duration: 11s;
+}
+.bubble:nth-child(5) {
+    top: 60%;
+    left: 10%;
+    animation-duration: 9s;
+}
+.bubble:nth-child(6) {
+    top: 90%;
+    left: 50%;
+    animation-duration: 13s;
+}
+
+/* ✅ تأثير الطفو */
+@keyframes float {
+    from {
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-50px) scale(1.2);
+    }
+}
+
+/* ✅ تأثير اللمعان */
+@keyframes glow {
+    from {
+        background: rgba(255, 255, 255, 0.15);
+    }
+    to {
+        background: rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* ✅ تصميم خلفية الموقع */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
+    font-family: Arial, sans-serif;
+}
+
+/* ✅ تصميم صندوق تسجيل الدخول */
 .login-container {
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 300px;
+    width: 350px;
     backdrop-filter: blur(10px);
-    color: white;
+    animation: fadeIn 1s ease-in-out;
 }
 
+/* ✅ الشعار */
 .logo img {
-    width: 100px;
-}
-
-h2 {
+    width: 80px;
     margin-bottom: 15px;
+    margin-left: 130px;
 }
 
-input {
+/* ✅ العنوان */
+.login-title {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* ✅ حقول الإدخال */
+.login-input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: 0.3s;
+    outline: none;
 }
 
-button {
+.login-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ✅ زر الدخول */
+.login-button {
     width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+    padding: 12px;
+    background: #3b82f6;
+    color: white;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
-    color: white;
-    font-size: 16px;
     cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
 }
 
+.login-button:hover {
+    background: #2563eb;
+}
+
+/* ✅ رابط نسيان كلمة المرور */
 .forgot-password {
     display: block;
     margin-top: 10px;
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
+.forgot-password:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* ✅ زر إنشاء حساب */
 .create-account {
-    background-color: #008CBA;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.create-account:hover {
+    background: white;
+    color: #3b82f6;
+}
+/* ✅ تنسيق قسم تسجيل الدخول عبر وسائل التواصل */
+.social-login {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ✅ تصميم الزر العام */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.social-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ✅ زر جوجل */
+.google {
+    border: 1px solid #db4437;
+}
+
+.google:hover {
+    background: #db4437;
+    color: white;
+}
+
+/* ✅ زر فيسبوك */
+.facebook {
+    border: 1px solid #1877f2;
+    background: ;
+}
+
+.facebook:hover {
+    background: #1877f2;
+    color: white;
+}
+
+
+/* ✅ أنيميشن ظهور */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ✅ خلفية متحركة */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* ✅ فقاعات متحركة */
+.bubble {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(8px);
+    animation: float 12s infinite alternate ease-in-out, glow 4s infinite alternate;
+}
+
+/* ✅ توزيع الفقاعات */
+.bubble:nth-child(1) { top: 10%; left: 20%; animation-duration: 14s; }
+.bubble:nth-child(2) { top: 50%; left: 70%; animation-duration: 11s; }
+.bubble:nth-child(3) { top: 80%; left: 30%; animation-duration: 15s; }
+.bubble:nth-child(4) { top: 30%; left: 80%; animation-duration: 13s; }
+.bubble:nth-child(5) { top: 60%; left: 10%; animation-duration: 9s; }
+
+/* ✅ تأثير الطفو */
+@keyframes float {
+    from { transform: translateY(0) scale(1); }
+    to { transform: translateY(-40px) scale(1.1); }
+}
+
+/* ✅ تأثير اللمعان */
+@keyframes glow {
+    from { background: rgba(255, 255, 255, 0.1); }
+    to { background: rgba(255, 255, 255, 0.3); }
+}
+
+/* ✅ هيدر الشات */
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ عنوان الشات */
+.chat-title {
+    font-size: 24px;
+    color: white;
+    margin-left: 10px;
+}
+
+/* ✅ صندوق الدردشة */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 85vh;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* ✅ منطقة الرسائل */
+.chat-box {
+    width: 400px;
+    max-width: 90%;
+    height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ الرسائل */
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* ✅ رسالة الروبوت */
+.message.bot {
+    justify-content: flex-start;
+    
+}
+
+.message.bot img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* ✅ رسالة المستخدم */
+.message.user {
+    justify-content: flex-end;
+}
+
+.message p {
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 70%;
+    font-size: 16px;
+    color: white;
+}
+
+.message.bot p {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.message.user p {
+    background: #3b82f6;
+}
+
+/* ✅ إدخال الرسائل */
+.chat-input {
+    display: flex;
+    width: 400px;
+    max-width: 90%;
     margin-top: 15px;
 }
 
-.bottom-logo {
-    margin-top: 20px;
+.message-input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: 0.3s;
+    outline: none;
 }
-.logolog{
-    width: 50px;
-    margin-left: 120px;
+
+.message-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
+.send-button {
+    background: #3b82f6;
+    color: white;
+    font-size: 18px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s;
+}
 
+.send-button:hover {
+    background: #2563eb;
+}
 
-
+/* ✅ أنيميشن ظهور الرسائل */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.logo{
+    margin-right: 135px;
+   
+}

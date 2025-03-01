@@ -7,28 +7,40 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <header>
+
+    <!-- ✅ خلفية متحركة -->
+    <div class="background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- ✅ هيدر الشات -->
+    <header class="chat-header">
         <div class="logo">
             <img src="images/safety.svg" alt="Рядом">
-            <h1>РЯДОМ</h1>
+            <h1 class="chat-title">РЯДОМ</h1>
         </div>
     </header>
     
+    <!-- ✅ صندوق الدردشة -->
     <div class="chat-container">
         <div class="chat-box">
             <div class="message bot">
-                <img src="images/safety.svg" alt="Рядом">
+                <img src="images/hope.svg" alt="Bot">
                 <p>Привет! Как я могу вам помочь?</p>
             </div>
-            <div class="message user">
-                
-            </div>
         </div>
+        
+        <!-- ✅ إدخال الرسائل -->
         <div class="chat-input">
-            <input type="text" placeholder="Введите сообщение...">
-            <button>Отправить</button>
+            <input type="text" class="message-input" placeholder="Введите сообщение...">
+            <button class="send-button">➤</button>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -7,19 +7,42 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="logollog">
-            <img src="images/safety.svg" alt="Рядом">
-        </div>
-        <h2>Вход в систему</h2>
-        <form action="#" method="post">
-            <input type="text" placeholder="Номер телефона или Email" required>
-            <input type="password" placeholder="Пароль" required>
-            <button type="submit">Войти</button>
-            <a href="#" class="forgot-password">Забыли пароль?</a>
-        </form>
-        <button class="create-account">Создать новый аккаунт</button>
+    <!-- عناصر متحركة في الخلفية -->
+    <div class="background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
     </div>
+
+    <div class="login-wrapper">
+        <div class="login-container">
+            <div class="logo">
+                <img src="images/safety.svg" alt="Рядом">
+            </div>
+            <h2 class="login-title">Вход в систему</h2>
+            <form action="#" method="post">
+                <input type="text" class="login-input" placeholder="Номер телефона или Email" required>
+                <input type="password" class="login-input" placeholder="Пароль" required>
+                <button type="submit" class="login-button">Войти</button>
+                <a href="#" class="forgot-password">Забыли пароль?</a>
+            </form>
+            <button class="create-account">Создать новый аккаунт</button>
+            <div class="social-login">
+                <button class="social-btn google">
+                    войдите через Instgram
+                    <img src="images/instagram.svg" alt="Google">
+                </button>
+                <button class="social-btn facebook">
+                    войдите через Facebook 
+                    <img src="images/facebook.svg" alt="Facebook">
+                </button>
+            </div>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
