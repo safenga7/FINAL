@@ -62,7 +62,6 @@ header {
     padding: 10px 0;
     color:white ;
 }
-
 .logo {
     display: flex;
     align-items: center;
@@ -70,12 +69,13 @@ header {
 h2 {
     margin-bottom: 15px;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    padding: 20px 20px;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -84,14 +84,21 @@ h2 {
     height: 20px;
     z-index: 1000;
 }
+.navbar-brand span {
+    font-size: 1.5rem; /* تغيير حجم الخط */
+    font-weight: bold; /* جعل الخط سميكًا */
+    color: #ffffff; /* لون النص */
+    margin-bottom: 0px; /* تحريك النص بعيدًا عن الشعار */
+    vertical-align: middle; /* التأكد من محاذاته عموديًا */
+}
 
 .navbar .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    justify-content:space-around;
+    align-items:center;
+    width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-bottom: 0px auto;
 }
 
 .navbar-brand {
@@ -102,7 +109,9 @@ h2 {
     letter-spacing: 1px;
     transition: color 0.3s ease-in-out;
     text-decoration: none; /* إزالة الخط تحت النص */
-    pointer-events: none; /* منع النقر */
+    pointer-events: none;
+    display: flex;
+    align-items: center; /* منع النقر */
 }
 
 .navbar-brand:hover {
