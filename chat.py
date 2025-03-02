@@ -1,14 +1,14 @@
 import sys
 from transformers import pipeline
 
-# تحميل نموذج الذكاء الاصطناعي
-pipe = pipeline("text-generation", model="klyang/MentaLLaMA-chat-7B")
+# تحميل النموذج
+pipe = pipeline("text-generation", model="ai-forever/rugpt3large_based_on_gpt2")
 
 # استقبال الرسالة من Node.js
-user_input = sys.argv[1]  
+user_input = sys.argv[1]
 
-# تشغيل النموذج على المدخلات
-response = pipe(user_input, max_length=200, do_sample=True)
+# توليد الرد باستخدام النموذج
+response = pipe(user_input, max_length=100, num_return_sequences=1)
 
-# طباعة الاستجابة لتتمكن Node.js من قراءتها
-print(response[0]["generated_text"])
+# طباعة النتيجة حتى يتم التقاطها في Node.js
+print(response[0]['generated_text'])
