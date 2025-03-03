@@ -579,11 +579,11 @@ h2 {
     color: white;
 }
 
-/* ✅ زر فيسبوك */
-.facebook {
+/* ✅ زر فيسبوك .facebook {
     border: 1px solid #1877f2;
     background: ;
-}
+}*/
+
 
 .facebook:hover {
     background: #1877f2;
