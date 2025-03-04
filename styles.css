@@ -236,7 +236,7 @@ h2 {
 }
 
 .A, .B {
-    border-radius: 50%;
+    border-radius: 10%;
     height: 400px;
     width: 400px;
     margin: 50px; /* إزالة الهوامش الفردية السابقة */
@@ -773,4 +773,37 @@ h2 {
 .logo{
     margin-right: 135px;
    
+}
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+.backk-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 140px;
+}
+
+.backk-button:hover {
+    background-color: #2980b9;
 }
