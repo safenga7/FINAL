@@ -523,8 +523,8 @@ h2 {
 /* ✅ زر إنشاء حساب */
 .create-account {
     width: 100%;
-    padding: 12px;
-    margin-top: 15px;
+    padding: 10px;
+    margin-top: 25px;
     background: transparent;
     color: white;
     font-size: 16px;
@@ -806,4 +806,248 @@ h2 {
 
 .backk-button:hover {
     background-color: #2980b9;
+}
+/* ✅ تصميم صفحة التسجيل */
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
+    font-family: Arial, sans-serif;
+}
+
+/* ✅ صندوق التسجيل */
+.register-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ✅ عنوان التسجيل */
+.register-title {
+    font-size: 24px;
+    color: #ffffff;
+    
+}
+
+/* ✅ حقول الإدخال */
+.register-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: 0.3s;
+    outline: none;
+}
+
+.register-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.register-input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ✅ زر التسجيل */
+.register-button {
+    width: 100%;
+    padding: 12px;
+    background: #3b82f6;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.register-button:hover {
+    background: #2563eb;
+}
+
+/* ✅ اختيار الجنس */
+.gender-select {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.gender-select label {
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ✅ رابط تسجيل الدخول */
+.have-account {
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.have-account a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.have-account a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ أزرار تسجيل الدخول عبر وسائل التواصل */
+.social-login {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ✅ تصميم زر وسائل التواصل */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.social-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ✅ زر جوجل */
+.google {
+    border: 1px solid #db4437;
+}
+
+.google:hover {
+    background: #db4437;
+    color: white;
+}
+
+/* ✅ زر فيسبوك */
+.facebook {
+    border: 1px solid #1877f2;
+}
+
+.facebook:hover {
+    background: #1877f2;
+    color: white;
+}
+/* ✅ خلفية الصفحة */
+.forgot-password-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
+    font-family: Arial, sans-serif;
+}
+
+/* ✅ تصميم صندوق الاستعادة */
+.forgot-password-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ✅ الشعار */
+.logo img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+/* ✅ العنوان */
+.forgot-title {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* ✅ النص التوضيحي */
+.forgot-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* ✅ حقل الإدخال */
+.forgot-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: 0.3s;
+    outline: none;
+}
+
+.forgot-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.forgot-input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ✅ زر الإرسال */
+.forgot-button {
+    width: 100%;
+    padding: 12px;
+    background: #3b82f6;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.forgot-button:hover {
+    background: #2563eb;
+}
+
+/* ✅ رابط الرجوع لتسجيل الدخول */
+.back-to-login {
+    display: block;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.back-to-login:hover {
+    color: white;
+    text-decoration: underline;
 }
