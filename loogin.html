@@ -25,21 +25,21 @@
                 <img src="images/icon.png" alt="Рядом">
             </div>
             <h2 class="login-title">Вход в систему</h2>
-            <form action="#" method="post">
-                <input type="text" class="login-input" placeholder="Номер телефона или Email" required>
+            <form id="loginForm" action="#" method="post">                <input type="text" class="login-input" placeholder="Номер телефона или Email" required>
                 <input type="password" class="login-input" placeholder="Пароль" required>
                 <button type="submit" class="login-button">Войти</button>
                 <a href="forget.html" class="forgot-password">Забыли пароль?</a>
             </form>
             <button class="create-account" onclick="window.location.href='newacc.html'">Создать новый аккаунт</button>           
              <div class="social-login">
-                <button class="social-btn google">
+                <button class="social-btn google" onclick="window.location.href='https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=ASSHykrTyFSxvzgFh9Op2BiA5832YnTuaSZEk6u_mJxXbPg2aedeHbTLCfmbWgR4TuYbc2u-nPZ9&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1693532954%3A1741397679115876&ddm=1'">
                     войдите через Google
                     <img src="images/icons8-google.svg" alt="Google">
                 </button>
-                <button class="social-btn facebook">
+                
+                <button class="social-btn facebook" onclick="window.location.href='https://id.vk.com/auth?action=eyJuYW1lIjoibm9fcGFzc3dvcmRfZmxvdyIsInRva2VuIjoiN2dWek1EWXR3TG1OTEJJRG1mX1pTU3FMVGNQUzZid3dTS3pBM3htUjJQX3lZRjQzdExhWGRXeVVIZXA2LUVnVFcwdTViZzV5emk0MUZKQWtqY0FhOGc0amdhQ0ZVLU1jOEY0NXZJUTZEOUNRNENyQXVfMk4zYzJLNHFBNnU1NGhIMndQaFVHVkJKbG5yWG1Qek84MDZBWmJNWF9HdGRZck91WEVoM1IyekpOc3BHbk9KSEdyV194dmJaRzE0RUFnNkI1WERqV0ZKNE9rSzVVSXBlYzMyam5oX0ZVVnFXUS1MakRQRVgxSVk2aC1FNHU4YmZkaHNPZ0JYa0M4S3hzRyIsImlucHV0X3R5cGUiOiJwaG9uZSIsInBhcmFtcyI6eyJ0eXBlIjoic2lnbl9pbiIsImNzcmZfaGFzaCI6ImFmM2U3ZjQ3NjBiZTlmNjU5YiJ9fQ%3D%3D&scheme=dark&is_redesigned=1&uuid=vbdngs&response_type=silent_token&v=1.3.0&app_id=7913379&redirect_uri=https%3A%2F%2Fvk.com%2Fjoin'">
                     войдите через VK 
-                    <img src="images/vk-logo-svgrepo-com.svg" alt="Facebook">
+                    <img src="images/vk-logo-svgrepo-com.svg" alt="VK">
                 </button>
             </div>
         </div>

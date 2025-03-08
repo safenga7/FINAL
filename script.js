@@ -61,3 +61,71 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const passwordInput = document.querySelector(".login-input[type='password']");
+    
+    // إنشاء زر إظهار/إخفاء كلمة المرور
+    const toggleButton = document.createElement("span");
+    toggleButton.textContent = "🙈"; // يبدأ بحالة الإخفاء
+    toggleButton.style.cursor = "pointer";
+    toggleButton.style.position = "absolute";
+    toggleButton.style.right = "10px";
+    toggleButton.style.top = "50%";
+    toggleButton.style.transform = "translateY(-50%)";
+    toggleButton.style.fontSize = "20px";
+    
+    // إضافة الزر داخل الـ form
+    const wrapper = document.createElement("div");
+    wrapper.style.position = "relative";
+    passwordInput.parentNode.insertBefore(wrapper, passwordInput);
+    wrapper.appendChild(passwordInput);
+    wrapper.appendChild(toggleButton);
+
+    // تغيير حالة الإظهار/الإخفاء عند النقر
+    toggleButton.addEventListener("click", function () {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            toggleButton.textContent = "👁"; // تغيير الأيقونة عند الإظهار
+        } else {
+            passwordInput.type = "password";
+            toggleButton.textContent = "🙈"; // تغيير الأيقونة عند الإخفاء
+        }
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("loginForm");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+
+    // ✅ التحقق من صحة المدخلات قبل الإرسال
+    loginForm.addEventListener("submit", function (event) {
+        let valid = true;
+        let emailValue = emailInput.value.trim();
+        let passwordValue = passwordInput.value.trim();
+
+        // التحقق من البريد الإلكتروني أو رقم الهاتف
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^\+?\d{10,15}$/;
+        if (!emailRegex.test(emailValue) && !phoneRegex.test(emailValue)) {
+            alert("Пожалуйста, введите корректный Email или номер телефона.");
+            valid = false;
+        }
+
+        // التحقق من كلمة المرور
+        if (passwordValue.length < 6) {
+            alert("Пароль должен содержать не менее 6 символов.");
+            valid = false;
+        }
+
+        if (!valid) {
+            event.preventDefault(); // منع إرسال النموذج في حالة وجود خطأ
+        }
+    });
+
+    // ✅ دعم الضغط على Enter لإرسال النموذج
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            loginForm.submit();
+        }
+    });
+});
