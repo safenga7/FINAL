@@ -381,6 +381,10 @@ h2 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     animation: floatImage 4s infinite alternate ease-in-out;
 }
+.about-list i {
+    color: #4CAF50; /* لون أخضر */
+    margin-right: 8px;
+}
 
 /* ✅ تأثير طفو الصورة */
 @keyframes floatImage {
