@@ -350,7 +350,7 @@ h2 {
     font-size: 2rem;
     text-align: center;
     max-width: 1500px;
-    animation: typing 3s steps(30, end) forwards, blink 0.8s infinite;
+    animation: typing 2s steps(100, end) forwards, blink 8s infinite;
 }
 /* ✅ قسم "من نحن؟" */
 .about-section {
