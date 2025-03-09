@@ -1421,3 +1421,10 @@ input::placeholder {
     color: #007bff;
     text-decoration: none;
 }
+.library-item {
+    transition: transform 0.3s ease-in-out;
+}
+
+.library-item:hover {
+    transform: scale(1.25);
+}
