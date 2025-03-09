@@ -4,10 +4,10 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    flex-direction: column;
+    align-items: center; 
+    padding: 0px;
+    margin: 0px;
+    flex-direction: column; 
 }
 .background-element {
     position: absolute;
@@ -669,12 +669,7 @@ h2 {
     background: #db4437;
     color: white;
 }
-
-/* ✅ زر فيسبوك .facebook {
-    border: 1px solid #1877f2;
-    background: ;
-}*/
-
+l
 
 .facebook:hover {
     background: #1877f2;
@@ -1260,4 +1255,165 @@ input::placeholder {
         opacity: 1;
         transform: translateY(0);
     }
+}
+.footer {
+    background: #f7f7f7;
+    padding: 40px 5%;
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: white;
+    background: #2d3e37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    background: #1a2520;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: #555;
+}
+
+.footer-bottom span {
+    color: #777;
+}
+
+/* جعل التصميم متجاوبًا */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+.library {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
+    
+}
+
+.library-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.search-bar input {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.categories {
+    margin: 20px 0;
+}
+
+.category-btn {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.category-btn.active {
+    background: #0056b3;
+}
+
+.library-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.library-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.library-item h3 {
+    font-size: 18px;
+}
+
+.library-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+.library-item a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
 }

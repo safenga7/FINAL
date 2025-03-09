@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рядом - Онлайн Поддержка</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
 </head>
 <body>
 <div class="background-element"></div>
@@ -140,6 +142,7 @@
         </div>
     </div>
 </section>
+
 <div class="background-element"></div>
 <div class="background-element"></div>
 <div class="background-element"></div>
@@ -150,6 +153,76 @@
 <div class="background-element"></div>
 <div class="background-element"></div>
 <div class="background-element"></div>
+<section class="library">
+    <h2 class="library-title">📚 Библиотека знаний</h2>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="🔍 Найти материалы..." onkeyup="filterContent()">
+    </div>
+
+    <div class="categories">
+        <button class="category-btn active" onclick="filterCategory('all')">Все</button>
+        <button class="category-btn" onclick="filterCategory('articles')">📝 Статьи</button>
+        <button class="category-btn" onclick="filterCategory('videos')">🎥 Видео</button>
+        <button class="category-btn" onclick="filterCategory('files')">📂 Файлы</button>
+    </div>
+
+    <div class="library-content">
+        <div class="library-item articles">
+            <h3>Как справляться со стрессом</h3>
+            <p>Полезные советы и методы для снижения стресса.</p>
+            <a href="#">Читать больше →</a>
+        </div>
+
+        <div class="library-item videos">
+            <h3>Медитация для расслабления</h3>
+            <p>Короткое видео о том, как расслабиться и снять напряжение.</p>
+            <a href="#">Смотреть видео →</a>
+        </div>
+
+        <div class="library-item files">
+            <h3>PDF: Руководство по самопомощи</h3>
+            <p>Скачать бесплатное руководство для психологического благополучия.</p>
+            <a href="#">Скачать файл →</a>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-links">
+            <div class="footer-column">
+                <a href="#">Главная</a>
+                <a href="#">Бизнес</a>
+                <a href="#">О нас</a>
+                <a href="#">Советы</a>
+                <a href="#">Карьера</a>
+                <a href="#">Найти терапевта</a>
+            </div>
+            <div class="footer-column">
+                <a href="#">Найти терапевта</a>
+                <a href="#"> Контакты</a>
+                <a href="#">Для терапевтов</a>
+            </div>
+        </div>
+        
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <a href="#"> Условия и положения</a>
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Настройки обмена</a>
+        <a href="#">Доступность веб-сайта</a>
+        <span>© 2025 Рядом</span>
+    </div>
+</footer>
+
 
 <script src="script.js"></script>                 
 </body>
