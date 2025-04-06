@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
+    background: linear-gradient(135deg, #0f172a, #0d2054, #1959c0, #074591);
     background-attachment: fixed;
     font-family: Arial, sans-serif;
     display: flex;
@@ -1151,7 +1151,7 @@ l
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: white;
+    color: rgb(255, 253, 253);
 }
 .back-button {
     position: absolute;
@@ -1453,30 +1453,6 @@ input::placeholder {
     display: none; /* إخفاء السكروول للمتصفحات التي تدعم WebKit */
 }
 
-.doctor-card {
-    min-width: 320px;
-    max-width: 320px;
-    background: #d1d1d1;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    position: relative;
-    
-}
-
-.doctor-card:hover {
-    transform: translateY(-5px);
-}
-
-.doctor-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
 .doctor-info {
     margin-top: 15px;
 }
@@ -1531,96 +1507,77 @@ input::placeholder {
     .prev-btn, .next-btn {
         display: none;
     }
-}
-  .doctor-section {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+} 
   .section-title {
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #a7a7a7;
+    padding: 20px;
+    color: #1e88e5;
   }
   
-  .doctor-cards {
+  .doctors-section {
+    padding: 20px 40px;
+  }
+  
+  .doctors-row {
     display: flex;
-    flex-direction: column;
-    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 30px;
   }
   
   .doctor-card {
-    display: flex;
-    background-color: #fff;
+    background: #0c0c0c;
     border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 430px;
+    height: 330px;
+    margin: 15px;
+    text-align: center;
     transition: transform 0.3s ease;
   }
   
   .doctor-card:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
   }
   
   .doctor-card img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
     object-fit: cover;
-    border-right: 1px solid #eee;
   }
   
-  .doctor-info {
-    padding: 20px;
-    flex: 1;
+  .doctor-card h3 {
+    margin: 10px 0 5px;
+    color: #0288d1;
   }
   
-  .doctor-info h3 {
-    margin-top: 0;
-    color: #1e3c72;
+  .specialty {
+    font-weight: bold;
+    color: #555;
   }
   
-  .doctor-info p {
-    margin: 8px 0;
-    line-height: 1.5;
+  .experience,
+  .availability {
+    font-size: 0.9em;
+    color: #777;
+    margin: 5px 0;
   }
   
   .book-btn {
     margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #1e88e5;
+    background-color: #43a047;
     color: #fff;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
   }
   
   .book-btn:hover {
-    background-color: #1565c0;
+    background-color: #388e3c;
   }
-  .image-slider {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.slider-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-}
-
-.slider-image.active {
-  opacity: 1;
-  z-index: 1;
-}
+  
+  

@@ -86,17 +86,3 @@ function filterCategory(category) {
         }
     });
 }
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".book-btn");
-    
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            alert("Вы записаны на прием к врачу!");
-        });
-    });
-});
-function scrollDoctors(direction) {
-    const container = document.querySelector(".doctors-container");
-    const scrollAmount = 350; // مقدار التمرير
-    container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
-}
