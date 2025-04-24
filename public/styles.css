@@ -1,3 +1,4 @@
+
 body {
     background: linear-gradient(135deg, #0f172a, #0d2054, #1959c0, #074591);
     background-attachment: fixed;
@@ -8,6 +9,7 @@ body {
     padding: 0px;
     margin: 0px;
     flex-direction: column; 
+    
 }
 .background-element {
     position: absolute;
