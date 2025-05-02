@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход | Рядом</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- عناصر متحركة في الخلفية -->
+    <div class="background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <div class="login-wrapper">
+        <div class="login-container">
+            <div class="logo">
+                <img src="images/icon.png" alt="Рядом">
+            </div>
+            <h2 class="login-title">Вход в систему</h2>
+            <div id="error-message" class="error-message" style="display: none;"></div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="email" class="login-input" placeholder="Email" required>
+                    <span class="input-error" id="email-error"></span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" class="login-input" placeholder="Пароль" required>
+                    <span class="input-error" id="password-error"></span>
+                </div>
+                <button type="submit" class="login-button" id="loginButton">
+                    <span class="button-text">Войти</span>
+                    <div class="loader" style="display: none;"></div>
+                </button>
+                <a href="/reset-password.html" class="forgot-password">Забыли пароль?</a>
+            </form>
+            <button id="createAccount" class="create-account">Создать новый аккаунт</button>
+            <div class="social-login">
+                <button class="social-btn google">
+                    войдите через Instgram
+                    <img src="images/instagram.svg" alt="Google">
+                </button>
+                <button class="social-btn facebook">
+                    войдите через Facebook
+                    <img src="images/facebook.svg" alt="Facebook">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = window.location.hostname === 'localhost'
+            ? 'http://localhost:5060'
+            : 'https://api.ryadom.com';
+
+        const loginForm = document.getElementById('loginForm');
+        const loginButton = document.getElementById('loginButton');
+        const buttonText = loginButton.querySelector('.button-text');
+        const loader = loginButton.querySelector('.loader');
+        const errorMessage = document.getElementById('error-message');
+
+        function showLoading() {
+            buttonText.style.display = 'none';
+            loader.style.display = 'block';
+            loginButton.disabled = true;
+        }
+
+        function hideLoading() {
+            buttonText.style.display = 'block';
+            loader.style.display = 'none';
+            loginButton.disabled = false;
+        }
+
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+            setTimeout(() => {
+                errorMessage.style.display = 'none';
+            }, 5000);
+        }
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Reset error messages
+            document.querySelectorAll('.input-error').forEach(el => el.textContent = '');
+            errorMessage.style.display = 'none';
+
+            showLoading();
+
+            try {
+                const response = await fetch(`${API_URL}/api/users/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    localStorage.setItem('token', data.token);
+                    if (data.subscription && data.subscription.status === 'active') {
+                        window.location.href = 'AI.html';
+                    } else {
+                        window.location.href = 'index.html#subscription';
+                    }
+                } else {
+                    if (data.errors) {
+                        // Handle validation errors
+                        Object.keys(data.errors).forEach(field => {
+                            const errorElement = document.getElementById(`${field}-error`);
+                            if (errorElement) {
+                                errorElement.textContent = data.errors[field];
+                            }
+                        });
+                    } else {
+                        showError(data.message || 'Ошибка входа. Пожалуйста, проверьте ваши данные.');
+                    }
+                }
+            } catch (error) {
+                showError('Ошибка сервера. Пожалуйста, попробуйте позже.');
+            } finally {
+                hideLoading();
+            }
+        });
+
+        document.getElementById('createAccount').addEventListener('click', () => {
+            window.location.href = 'register.html';
+        });
+    </script>
+</body>
+</html>

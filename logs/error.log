@@ -1,0 +1,114 @@
+2025-04-30 05:06:30:630 [31merror[39m: [31mMaxRetriesPerRequestError: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.: Uncaught Exception:[39m
+2025-04-30 05:09:08:98 [31merror[39m: [31mMaxRetriesPerRequestError: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.: Uncaught Exception:[39m
+2025-04-30 05:11:36:1136 [31merror[39m: [31mMaxRetriesPerRequestError: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.: Uncaught Exception:[39m
+2025-04-30 05:18:19:1819 [31merror[39m: [31mMaxRetriesPerRequestError: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.: Uncaught Exception:[39m
+2025-05-02 02:42:04:424 [31merror[39m: [31mGET /api/csrf-token: TypeError: generateCsrfToken is not a function[39m
+[31m    at file:///D:/FINAL/src/server.js:59:23[39m
+[31m    at Layer.handle [as handle_request] (D:\FINAL\node_modules\express\lib\router\layer.js:95:5)[39m
+[31m    at next (D:\FINAL\node_modules\express\lib\router\route.js:149:13)[39m
+[31m    at Route.dispatch (D:\FINAL\node_modules\express\lib\router\route.js:119:3)[39m
+[31m    at Layer.handle [as handle_request] (D:\FINAL\node_modules\express\lib\router\layer.js:95:5)[39m
+[31m    at D:\FINAL\node_modules\express\lib\router\index.js:284:15[39m
+[31m    at Function.process_params (D:\FINAL\node_modules\express\lib\router\index.js:346:12)[39m
+[31m    at next (D:\FINAL\node_modules\express\lib\router\index.js:280:10)[39m
+[31m    at SendStream.error (D:\FINAL\node_modules\serve-static\index.js:121:7)[39m
+[31m    at SendStream.emit (node:events:518:28)[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:30:45:3045 [31merror[39m: [31mError: write EPIPE: Uncaught Exception:[39m
+2025-05-02 16:51:10:5110 [31merror[39m: [31mTypeError: fetch failed: Health check failed[39m
+2025-05-02 17:11:35:1135 [31merror[39m: [31mPOST /api/users/register: ForbiddenError: invalid csrf token[39m
+[31m    at doubleCsrf (file:///D:/FINAL/node_modules/csrf-csrf/dist/index.js:30:33)[39m
+[31m    at file:///D:/FINAL/src/middleware/security.js:32:49[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:271:25)[39m
+[31m    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:578:26)[39m
+[31m    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)[39m
+2025-05-02 17:13:04:134 [31merror[39m: [31mGET /api/csrf-token: TypeError: generateCsrfToken is not a function[39m
+[31m    at file:///D:/FINAL/src/server.js:59:19[39m
+[31m    at Layer.handle [as handle_request] (D:\FINAL\node_modules\express\lib\router\layer.js:95:5)[39m
+[31m    at next (D:\FINAL\node_modules\express\lib\router\route.js:149:13)[39m
+[31m    at Route.dispatch (D:\FINAL\node_modules\express\lib\router\route.js:119:3)[39m
+[31m    at Layer.handle [as handle_request] (D:\FINAL\node_modules\express\lib\router\layer.js:95:5)[39m
+[31m    at D:\FINAL\node_modules\express\lib\router\index.js:284:15[39m
+[31m    at Function.process_params (D:\FINAL\node_modules\express\lib\router\index.js:346:12)[39m
+[31m    at next (D:\FINAL\node_modules\express\lib\router\index.js:280:10)[39m
+[31m    at SendStream.error (D:\FINAL\node_modules\serve-static\index.js:121:7)[39m
+[31m    at SendStream.emit (node:events:518:28)[39m
+2025-05-02 17:13:09:139 [31merror[39m: [31mGET /api/csrf-token: TypeError: generateCsrfToken is not a function[39m
+[31m    at file:///D:/FINAL/src/server.js:59:19[39m
+[31m    at Layer.handle [as handle_request] (D:\FINAL\node_modules\express\lib\router\layer.js:95:5)[39m
+[31m    at next (D:\FINAL\node_modules\express\lib\router\route.js:149:13)[39m
+[31m    at Route.dispatch (D:\FINAL\node_modules\express\lib\router\route.js:119:3)[39m
+[31m    at Layer.handle [as handle_request] (D:\FINAL\node_modules\express\lib\router\layer.js:95:5)[39m
+[31m    at D:\FINAL\node_modules\express\lib\router\index.js:284:15[39m
+[31m    at Function.process_params (D:\FINAL\node_modules\express\lib\router\index.js:346:12)[39m
+[31m    at next (D:\FINAL\node_modules\express\lib\router\index.js:280:10)[39m
+[31m    at SendStream.error (D:\FINAL\node_modules\serve-static\index.js:121:7)[39m
+[31m    at SendStream.emit (node:events:518:28)[39m
+2025-05-02 17:14:10:1410 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
