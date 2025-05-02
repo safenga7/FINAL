@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Восстановление пароля - Рядом</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+
+    <nav class="navbar sticky top-0 bg-white" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img width="30" height="45" alt="" src="images/icon.png" />
+                <span>Рядом</span>
+            </a>
+            <button class="navbar-btn" data-toggle="collapse" data-target="#navbar-row" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Открыть меню панели навигации</span>
+                <span class="block h-1 rounded-full bg-primary"></span>
+                <span class="block h-1 mt-1 rounded-full bg-primary"></span>
+                <span class="block h-1 mt-1 rounded-full bg-primary"></span>
+            </button>
+            <div class="navbar-row" id="navbar-row">
+                <ul class="navbar-col"></ul>
+                <ul class="navbar-col"></ul>
+                <ul class="navbar-col">
+                    <li>
+                        <a class="nav-link font-semibold" href="index.html#about">о нас</a>
+                    </li>
+                    <li>
+                        <a class="nav-link font-semibold" href="loogin.html">Вход</a>
+                    </li>
+                    <li>
+                        <a class="nav-link btn btn-primary" href="AI.html">Начать ИИ➔</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="auth-container">
+        <div class="auth-form-container">
+            <h2>Восстановление пароля</h2>
+            <p class="auth-description">Введите адрес электронной почты, связанный с вашей учетной записью, и мы отправим вам ссылку для сброса пароля.</p>
+
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="email">Электронная почта</label>
+                    <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+                </div>
+
+                <button type="submit" class="auth-button">Отправить ссылку для сброса</button>
+            </form>
+
+            <div class="auth-links">
+                <a href="loogin.html">Вернуться к входу</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="index.html">Главная</a>
+                    <a href="pay.html">Бизнес</a>
+                    <a href="index.html#about">О нас</a>
+                    <a href="#">Советы</a>
+                    <a href="#">Карьера</a>
+                    <a href="book.html">Найти терапевта</a>
+                </div>
+                <div class="footer-column">
+                    <a href="book.html">Найти терапевта</a>
+                    <a href="#"> Контакты</a>
+                    <a href="#">Для терапевтов</a>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="#"> Условия и положения</a>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Настройки обмена</a>
+            <a href="#">Доступность веб-сайта</a>
+            <span>© 2025 Рядом</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="form-validation.js"></script>
+    <script src="authentication.js"></script>
+</body>
+</html>

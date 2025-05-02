@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "amr",
+    "email": "mo7880@gmail.com",
+    "password": "123456789",
+    "role": "user",
+    "subscriptionStatus": "active",
+    "sessionsRemaining": 10
+  }
+]

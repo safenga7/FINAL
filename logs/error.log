@@ -112,3 +112,7 @@
 [31m    at SendStream.error (D:\FINAL\node_modules\serve-static\index.js:121:7)[39m
 [31m    at SendStream.emit (node:events:518:28)[39m
 2025-05-02 17:14:10:1410 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
+2025-05-02 18:34:57:3457 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
+2025-05-02 18:35:42:3542 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
+2025-05-02 18:39:24:3924 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
+2025-05-02 18:39:35:3935 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m

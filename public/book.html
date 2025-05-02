@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование сеанса - Рядом</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+    <div class="background-element"></div>
+
+    <nav class="navbar sticky top-0 bg-white" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img width="30" height="45" alt="" src="images/icon.png" />
+                <span>Рядом</span>
+            </a>
+            <button class="navbar-btn" data-toggle="collapse" data-target="#navbar-row" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Открыть меню панели навигации</span>
+                <span class="block h-1 rounded-full bg-primary"></span>
+                <span class="block h-1 mt-1 rounded-full bg-primary"></span>
+                <span class="block h-1 mt-1 rounded-full bg-primary"></span>
+            </button>
+            <div class="navbar-row" id="navbar-row">
+                <ul class="navbar-col"></ul>
+                <ul class="navbar-col"></ul>
+                <ul class="navbar-col">
+                    <li>
+                        <a class="nav-link font-semibold" href="index.html#about">о нас</a>
+                    </li>
+                    <li>
+                        <a class="nav-link font-semibold" href="loogin.html">Вход</a>
+                    </li>
+                    <li>
+                        <a class="nav-link btn btn-primary" href="AI.html">Начать ИИ➔</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="booking-container">
+        <h1>Бронирование сеанса</h1>
+
+        <div class="booking-steps">
+            <div class="step active">
+                <div class="step-number">1</div>
+                <div class="step-text">Выбор специалиста</div>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-text">Выбор даты и времени</div>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text">Подтверждение</div>
+            </div>
+        </div>
+
+        <div class="specialist-filters">
+            <div class="filter-group">
+                <label for="specialization">Специализация:</label>
+                <select id="specialization">
+                    <option value="all">Все специализации</option>
+                    <option value="psychologist">Психолог</option>
+                    <option value="psychiatrist">Психиатр</option>
+                    <option value="therapist">Терапевт</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="language">Язык:</label>
+                <select id="language">
+                    <option value="all">Все языки</option>
+                    <option value="russian">Русский</option>
+                    <option value="english">Английский</option>
+                    <option value="spanish">Испанский</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="rating">Рейтинг:</label>
+                <select id="rating">
+                    <option value="all">Любой рейтинг</option>
+                    <option value="4">4+ звезды</option>
+                    <option value="4.5">4.5+ звезды</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="specialists-list">
+            <div class="specialist-card">
+                <div class="specialist-photo">
+                    <img src="images/6.jpeg" alt="Специалист">
+                </div>
+                <div class="specialist-info">
+                    <h3>Д-р Ирина Иванов</h3>
+                    <p class="specialist-title">Психолог, Когнитивно-поведенческая терапия</p>
+                    <div class="specialist-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.9 (120 отзывов)</span>
+                    </div>
+                    <p class="specialist-experience">Опыт: 10 лет</p>
+                    <p class="specialist-languages">Языки: Русский, Английский</p>
+                    <p class="specialist-price">1500 ₽ / сеанс</p>
+                    <p class="specialist-availability">Ближайшее доступное время: Сегодня, 15:00</p>
+                    <button class="select-specialist-btn">Выбрать</button>
+                </div>
+            </div>
+
+            <div class="specialist-card">
+                <div class="specialist-photo">
+                    <img src="images/2.jpeg" alt="Специалист">
+                </div>
+                <div class="specialist-info">
+                    <h3>Д-р Анна Смирнова</h3>
+                    <p class="specialist-title">Психиатр, Психотерапевт</p>
+                    <div class="specialist-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.7 (85 отзывов)</span>
+                    </div>
+                    <p class="specialist-experience">Опыт: 8 лет</p>
+                    <p class="specialist-languages">Языки: Русский</p>
+                    <p class="specialist-price">1800 ₽ / сеанс</p>
+                    <p class="specialist-availability">Ближайшее доступное время: Завтра, 10:00</p>
+                    <button class="select-specialist-btn">Выбрать</button>
+                </div>
+            </div>
+
+            <div class="specialist-card">
+                <div class="specialist-photo">
+                    <img src="images/3.jpeg" alt="Специалист">
+                </div>
+                <div class="specialist-info">
+                    <h3>Д-р Олга Петров</h3>
+                    <p class="specialist-title">Психолог, Семейный терапевт</p>
+                    <div class="specialist-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.8 (95 отзывов)</span>
+                    </div>
+                    <p class="specialist-experience">Опыт: 15 лет</p>
+                    <p class="specialist-languages">Языки: Русский, Испанский</p>
+                    <p class="specialist-price">1700 ₽ / сеанс</p>
+                    <p class="specialist-availability">Ближайшее доступное время: Сегодня, 18:30</p>
+                    <button class="select-specialist-btn">Выбрать</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn next">→</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="index.html">Главная</a>
+                    <a href="pay.html">Бизнес</a>
+                    <a href="index.html#about">О нас</a>
+                    <a href="#">Советы</a>
+                    <a href="#">Карьера</a>
+                    <a href="book.html">Найти терапевта</a>
+                </div>
+                <div class="footer-column">
+                    <a href="book.html">Найти терапевта</a>
+                    <a href="#"> Контакты</a>
+                    <a href="#">Для терапевтов</a>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="#"> Условия и положения</a>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Настройки обмена</a>
+            <a href="#">Доступность веб-сайта</a>
+            <span>© 2025 Рядом</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="form-validation.js"></script>
+    <script src="authentication.js"></script>
+</body>
+</html>
