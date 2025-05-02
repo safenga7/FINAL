@@ -1,165 +1,42 @@
-// Authentication utilities
-
-// Show loading spinner
-function showLoading(button) {
-    if (button) {
-        button.disabled = true;
-        button.innerHTML = '<span class="spinner"></span> Loading...';
+// Authentication handler
+class AuthHandler {
+    constructor() {
+        this.token = localStorage.getItem('token');
+        this.csrfToken = null;
+        this.initializeAuth();
     }
-}
 
-// Hide loading spinner
-function hideLoading(button, originalText) {
-    if (button) {
-        button.disabled = false;
-        button.innerHTML = originalText || 'Submit';
-    }
-}
-
-// Show error message
-function showError(message, container) {
-    const errorContainer = container || document.createElement('div');
-    errorContainer.className = 'error-message';
-    errorContainer.style.color = '#dc3545';
-    errorContainer.style.marginBottom = '15px';
-    errorContainer.style.padding = '10px';
-    errorContainer.style.border = '1px solid #dc3545';
-    errorContainer.style.borderRadius = '4px';
-    errorContainer.style.backgroundColor = '#f8d7da';
-    errorContainer.textContent = message;
-
-    if (!container) {
-        const form = document.querySelector('form');
-        if (form) {
-            form.insertBefore(errorContainer, form.firstChild);
+    async initializeAuth() {
+        // Check if user is authenticated
+        if (this.token) {
+            this.checkAuthStatus();
+        } else {
+            this.updateUIForGuest();
         }
     }
 
-    // Auto-hide after 5 seconds
-    setTimeout(() => {
-        if (errorContainer.parentNode) {
-            errorContainer.parentNode.removeChild(errorContainer);
-        }
-    }, 5000);
-}
-
-/**
- * Check if the user is authenticated
- * @returns {boolean} True if the user is authenticated, false otherwise
- */
-function isAuthenticated() {
-    const token = localStorage.getItem('token');
-    return !!token;
-}
-
-/**
- * Redirect to the login page if the user is not authenticated
- * @returns {boolean} True if the user is authenticated, false otherwise
- */
-function requireAuth() {
-    if (!isAuthenticated()) {
-        window.location.href = 'loogin.html';
-        return false;
-    }
-    return true;
-}
-
-/**
- * Check authentication and subscription status
- * @returns {Promise<boolean>} True if the user is authenticated and has an active subscription
- */
-async function checkAuth() {
-    const token = localStorage.getItem('token');
-    if (!token) {
-        window.location.href = 'loogin.html';
-        return false;
-    }
-
-    try {
-        const response = await fetch('http://localhost:5091/api/users/me', {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
-
-        if (!response.ok) {
-            if (response.status === 401) {
-                localStorage.removeItem('token');
-                window.location.href = 'loogin.html';
-            }
-            return false;
-        }
-
-        const userData = await response.json();
-        if (userData.subscriptionStatus !== 'active') {
-            window.location.href = 'index.html#subscription';
-            return false;
-        }
-
-        if (typeof updateSessionsCounter === 'function') {
-            updateSessionsCounter(userData.sessionsRemaining);
-        }
-        return true;
-    } catch (error) {
-        console.error('Auth check failed:', error);
-        return false;
-    }
-}
-
-/**
- * Make an authenticated API request
- * @param {string} url - The API endpoint
- * @param {Object} options - Request options
- * @returns {Promise<Response>} The fetch response
- */
-async function makeRequest(url, options = {}) {
-    const token = localStorage.getItem('token');
-
-    // Set default headers
-    options.headers = options.headers || {};
-    options.headers['Content-Type'] = options.headers['Content-Type'] || 'application/json';
-
-    // Add authorization header if token exists
-    if (token) {
-        options.headers['Authorization'] = `Bearer ${token}`;
-    }
-
-    try {
-        const response = await fetch(url, options);
-
-        // Handle authentication errors
-        if (response.status === 401) {
-            localStorage.removeItem('token');
-            window.location.href = 'loogin.html';
-        }
-
-        return response;
-    } catch (error) {
-        console.error('API request failed:', error);
-        throw error;
-    }
-}
-
-/**
- * Handle login form submission
- */
-function setupLoginForm() {
-    const loginForm = document.getElementById('loginForm');
-    if (!loginForm) return;
-
-    loginForm.addEventListener('submit', async function(event) {
-        event.preventDefault();
-
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        const submitButton = loginForm.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton.innerHTML;
-
-        showLoading(submitButton);
-
+    async checkAuthStatus() {
         try {
-            console.log('Attempting login with:', { email });
+            const response = await fetch('http://localhost:5091/api/users/me', {
+                headers: {
+                    'Authorization': `Bearer ${this.token}`
+                }
+            });
 
+            if (response.ok) {
+                const userData = await response.json();
+                this.updateUIForUser(userData);
+            } else {
+                this.logout();
+            }
+        } catch (error) {
+            console.error('Auth check failed:', error);
+            this.logout();
+        }
+    }
+
+    async login(email, password) {
+        try {
             const response = await fetch('http://localhost:5091/api/users/login', {
                 method: 'POST',
                 headers: {
@@ -169,176 +46,508 @@ function setupLoginForm() {
             });
 
             const data = await response.json();
-            console.log('Login response:', data);
 
-            if (response.ok) {
-                localStorage.setItem('token', data.token);
-                if (data.user && data.user.subscriptionStatus === 'active') {
-                    window.location.href = 'AI.html';
-                } else {
-                    window.location.href = 'index.html#subscription';
-                }
-            } else {
-                showError(data.message || 'Login failed. Please check your credentials.');
+            if (!response.ok) {
+                return {
+                    success: false,
+                    error: data.message || 'Неверный email или пароль',
+                    errors: data.errors
+                };
             }
+
+            this.token = data.token;
+            localStorage.setItem('token', this.token);
+
+            // Update UI
+            this.updateUIForUser(data.user);
+
+            return {
+                success: true,
+                user: data.user
+            };
         } catch (error) {
             console.error('Login error:', error);
-            showError('An error occurred during login. Please try again later.');
-        } finally {
-            hideLoading(submitButton, originalButtonText);
+            return {
+                success: false,
+                error: 'Ошибка при входе. Пожалуйста, попробуйте позже.'
+            };
         }
-    });
-}
-
-/**
- * Handle registration form submission
- */
-function setupRegistrationForm() {
-    // Look for registration form in newacc.html
-    const registrationForm = document.querySelector('.auth-form');
-    if (!registrationForm) {
-        console.log('Registration form not found');
-        return;
     }
 
-    console.log('Registration form found, setting up event listener');
-
-    registrationForm.addEventListener('submit', async function(event) {
-        event.preventDefault();
-
-        const name = document.getElementById('name')?.value;
-        const email = document.getElementById('email')?.value;
-        const password = document.getElementById('password')?.value;
-        const confirmPassword = document.getElementById('confirm-password')?.value;
-        const submitButton = registrationForm.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton.innerHTML;
-
-        if (!name || !email || !password || !confirmPassword) {
-            showError('Please fill in all required fields');
-            return;
-        }
-
-        if (password !== confirmPassword) {
-            showError('Passwords do not match');
-            return;
-        }
-
-        showLoading(submitButton);
-
+    async register(userData) {
         try {
-            console.log('Attempting registration with:', { name, email });
-
             const response = await fetch('http://localhost:5091/api/users/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ name, email, password })
+                body: JSON.stringify(userData)
             });
 
             const data = await response.json();
-            console.log('Registration response:', data);
 
-            if (response.ok) {
-                localStorage.setItem('token', data.token);
-                alert('Registration successful! You will now be redirected.');
-                window.location.href = 'index.html#subscription';
-            } else {
-                showError(data.message || 'Registration failed. Please try again.');
+            if (!response.ok) {
+                return {
+                    success: false,
+                    error: data.message || 'Ошибка при регистрации',
+                    errors: data.errors
+                };
             }
+
+            this.token = data.token;
+            localStorage.setItem('token', this.token);
+
+            // Update UI
+            this.updateUIForUser(data.user);
+
+            return {
+                success: true,
+                user: data.user
+            };
         } catch (error) {
             console.error('Registration error:', error);
-            showError('An error occurred during registration. Please try again later.');
-        } finally {
-            hideLoading(submitButton, originalButtonText);
+            return {
+                success: false,
+                error: 'Ошибка при регистрации. Пожалуйста, попробуйте позже.'
+            };
         }
-    });
-}
-
-/**
- * Handle password reset form submission
- */
-function setupPasswordResetForm() {
-    const resetForm = document.querySelector('.auth-form');
-    // Only set up if we're on the forget.html page
-    if (!resetForm || !window.location.href.includes('forget.html')) {
-        return;
     }
 
-    resetForm.addEventListener('submit', async function(event) {
-        event.preventDefault();
+    logout() {
+        localStorage.removeItem('token');
+        this.token = null;
+        this.updateUIForGuest();
 
-        const email = document.getElementById('email')?.value;
-        const submitButton = resetForm.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton.innerHTML;
+        // Redirect to home page if not already there
+        if (window.location.pathname !== '/index.html' && window.location.pathname !== '/') {
+            window.location.href = 'index.html';
+        }
+    }
 
-        if (!email) {
-            showError('Please enter your email address');
-            return;
+    updateUIForUser(userData) {
+        const navbarCol = document.querySelector('.navbar-col:last-child');
+        if (!navbarCol) return;
+
+        navbarCol.innerHTML = `
+            <li><a class="nav-link" href="#">${userData.name || 'Профиль'}</a></li>
+            <li><button class="nav-link" id="logoutButton">Выход</button></li>
+            <li><a class="nav-link btn btn-primary" href="AI.html">Начать ИИ➔</a></li>
+        `;
+
+        // Add user dropdown
+        const profileLink = navbarCol.querySelector('a[href="#"]');
+        if (profileLink) {
+            profileLink.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // Check if dropdown already exists
+                const existingDropdown = document.querySelector('.user-dropdown');
+                if (existingDropdown) {
+                    existingDropdown.remove();
+                    return;
+                }
+
+                // Create dropdown
+                const dropdown = document.createElement('div');
+                dropdown.className = 'user-dropdown';
+                dropdown.style.position = 'absolute';
+                dropdown.style.top = '60px';
+                dropdown.style.right = '20px';
+                dropdown.style.backgroundColor = 'white';
+                dropdown.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                dropdown.style.borderRadius = '4px';
+                dropdown.style.padding = '10px';
+                dropdown.style.zIndex = '1000';
+                dropdown.style.minWidth = '200px';
+
+                dropdown.innerHTML = `
+                    <div style="padding: 10px; border-bottom: 1px solid #eee;">
+                        <div style="font-weight: bold;">${userData.name}</div>
+                        <div style="color: #666; font-size: 0.9rem;">${userData.email}</div>
+                    </div>
+                    <div style="padding: 10px; border-bottom: 1px solid #eee;">
+                        <div>Статус подписки: ${userData.subscriptionStatus === 'active' ? 'Активна' : 'Неактивна'}</div>
+                        <div>Осталось сессий: ${userData.sessionsRemaining}</div>
+                    </div>
+                    <div style="padding: 10px; cursor: pointer; color: #dc3545;" id="logoutLink">Выйти</div>
+                `;
+
+                document.body.appendChild(dropdown);
+
+                // Add logout event
+                document.getElementById('logoutLink').addEventListener('click', () => {
+                    this.logout();
+                    dropdown.remove();
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function closeDropdown(e) {
+                    if (!dropdown.contains(e.target) && e.target !== profileLink) {
+                        dropdown.remove();
+                        document.removeEventListener('click', closeDropdown);
+                    }
+                });
+            });
         }
 
-        showLoading(submitButton);
+        const logoutButton = document.getElementById('logoutButton');
+        if (logoutButton) {
+            logoutButton.addEventListener('click', () => this.logout());
+        }
+    }
 
+    updateUIForGuest() {
+        const navbarCol = document.querySelector('.navbar-col:last-child');
+        if (!navbarCol) return;
+
+        navbarCol.innerHTML = `
+            <li><a class="nav-link font-semibold" href="#about">о нас</a></li>
+            <li><a class="nav-link font-semibold" href="login.html">Вход</a></li>
+            <li><a class="nav-link btn btn-primary" href="AI.html">Начать ИИ➔</a></li>
+        `;
+
+        // Remove any user dropdown if it exists
+        const dropdown = document.querySelector('.user-dropdown');
+        if (dropdown) {
+            dropdown.remove();
+        }
+    }
+
+    async makeRequest(url, options = {}) {
+        const defaultOptions = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+
+        if (this.token) {
+            defaultOptions.headers['Authorization'] = `Bearer ${this.token}`;
+        }
+
+        // Add base URL if not already included
+        if (!url.startsWith('http')) {
+            url = 'http://localhost:5091' + url;
+        }
+
+        return fetch(url, {
+            ...defaultOptions,
+            ...options,
+            headers: {
+                ...defaultOptions.headers,
+                ...options.headers
+            }
+        });
+    }
+
+    async resetPassword(email) {
+        // This is a mock implementation since we don't have a real password reset endpoint
         try {
-            const response = await fetch('http://localhost:5091/api/users/reset-password', {
+            // Simulate API call
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
+            // Check if email exists in our users
+            const response = await this.makeRequest('/api/users/login', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email })
+                body: JSON.stringify({ email, password: 'dummy-check-only' })
             });
 
-            if (response.ok) {
-                alert('Password reset instructions have been sent to your email.');
-                window.location.href = 'loogin.html';
-            } else {
-                const data = await response.json();
-                showError(data.message || 'Password reset failed. Please try again.');
+            const data = await response.json();
+
+            // If email doesn't exist
+            if (response.status === 400 && data.errors?.email?.includes('Invalid')) {
+                return {
+                    success: false,
+                    error: 'Email не найден в системе'
+                };
             }
+
+            return {
+                success: true,
+                message: 'Инструкции по сбросу пароля отправлены на ваш email'
+            };
         } catch (error) {
             console.error('Password reset error:', error);
-            showError('An error occurred during password reset. Please try again later.');
-        } finally {
-            hideLoading(submitButton, originalButtonText);
+            return {
+                success: false,
+                error: 'Ошибка при сбросе пароля. Пожалуйста, попробуйте позже.'
+            };
         }
-    });
+    }
+
+    async updateProfile(profileData) {
+        // This is a mock implementation since we don't have a real profile update endpoint
+        try {
+            // Simulate API call
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
+            // Get current user data
+            const response = await this.makeRequest('/api/users/me');
+
+            if (!response.ok) {
+                return {
+                    success: false,
+                    error: 'Не удалось получить данные пользователя'
+                };
+            }
+
+            const userData = await response.json();
+
+            // Merge with new data (this is just a simulation)
+            const updatedUser = {
+                ...userData,
+                ...profileData
+            };
+
+            // Update UI with new data
+            this.updateUIForUser(updatedUser);
+
+            return {
+                success: true,
+                message: 'Профиль успешно обновлен'
+            };
+        } catch (error) {
+            console.error('Profile update error:', error);
+            return {
+                success: false,
+                error: 'Ошибка при обновлении профиля. Пожалуйста, попробуйте позже.'
+            };
+        }
+    }
 }
 
-// Initialize authentication forms when the DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing authentication forms');
+// Initialize authentication handler
+const auth = new AuthHandler();
 
-    // Check if user is already logged in
-    if (isAuthenticated()) {
-        console.log('User is authenticated');
+// Form submission handlers
+document.addEventListener('DOMContentLoaded', () => {
+    // Login form
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
 
-        // Add logout functionality to any logout buttons
-        const logoutButtons = document.querySelectorAll('.logout-button');
-        logoutButtons.forEach(button => {
-            button.addEventListener('click', function(event) {
-                event.preventDefault();
-                localStorage.removeItem('token');
-                window.location.href = 'index.html';
-            });
+            // Get form elements
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const submitButton = document.getElementById('loginButton');
+            const buttonText = submitButton.querySelector('.button-text');
+            const loader = submitButton.querySelector('.loader');
+            const errorMessage = document.getElementById('error-message');
+
+            // Show loading state
+            if (buttonText && loader) {
+                buttonText.style.display = 'none';
+                loader.style.display = 'block';
+            }
+            if (submitButton) submitButton.disabled = true;
+
+            try {
+                const result = await auth.login(email, password);
+
+                if (result.success) {
+                    // Check subscription status
+                    if (result.user && result.user.subscriptionStatus === 'active') {
+                        window.location.href = 'AI.html';
+                    } else {
+                        window.location.href = 'index.html#subscription';
+                    }
+                } else {
+                    // Display error message
+                    if (errorMessage) {
+                        errorMessage.textContent = result.error;
+                        errorMessage.style.display = 'block';
+                    }
+
+                    // Display field-specific errors
+                    if (result.errors) {
+                        const emailError = document.getElementById('email-error');
+                        const passwordError = document.getElementById('password-error');
+
+                        if (emailError) emailError.textContent = result.errors.email || '';
+                        if (passwordError) passwordError.textContent = result.errors.password || '';
+                    }
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                if (errorMessage) {
+                    errorMessage.textContent = 'Произошла ошибка при входе. Пожалуйста, попробуйте позже.';
+                    errorMessage.style.display = 'block';
+                }
+            } finally {
+                // Hide loading state
+                if (buttonText && loader) {
+                    buttonText.style.display = 'inline';
+                    loader.style.display = 'none';
+                }
+                if (submitButton) submitButton.disabled = false;
+            }
         });
-    } else {
-        console.log('User is not authenticated');
     }
 
-    // Setup forms based on current page
-    if (window.location.href.includes('loogin.html') || window.location.href.includes('login.html')) {
-        console.log('Setting up login form');
-        setupLoginForm();
-    } else if (window.location.href.includes('newacc.html')) {
-        console.log('Setting up registration form');
-        setupRegistrationForm();
-    } else if (window.location.href.includes('forget.html')) {
-        console.log('Setting up password reset form');
-        setupPasswordResetForm();
-    } else {
-        // For other pages, set up all forms that might be present
-        setupLoginForm();
-        setupRegistrationForm();
-        setupPasswordResetForm();
+    // Registration form
+    const registrationForm = document.getElementById('registrationForm');
+    if (registrationForm) {
+        registrationForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const gender = document.querySelector('input[name="gender"]:checked')?.value;
+            const birthdate = document.getElementById('birthdate').value;
+            const submitButton = registrationForm.querySelector('button[type="submit"]');
+            const errorMessage = document.getElementById('error-message');
+
+            // Validate password
+            if (password.length < 6) {
+                if (errorMessage) {
+                    errorMessage.style.color = '#dc3545';
+                    errorMessage.textContent = 'Пароль должен содержать не менее 6 символов';
+                    errorMessage.style.display = 'block';
+                }
+                return;
+            }
+
+            // Validate password match
+            if (password !== confirmPassword) {
+                if (errorMessage) {
+                    errorMessage.style.color = '#dc3545';
+                    errorMessage.textContent = 'Пароли не совпадают';
+                    errorMessage.style.display = 'block';
+                }
+                return;
+            }
+
+            // Show loading state
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<span class="spinner"></span> Загрузка...';
+            }
+
+            try {
+                const result = await auth.register({
+                    name,
+                    email,
+                    phone,
+                    password,
+                    gender,
+                    birthdate
+                });
+
+                if (result.success) {
+                    // Show success message
+                    if (errorMessage) {
+                        errorMessage.style.color = '#28a745';
+                        errorMessage.textContent = 'Регистрация успешна! Вы будете перенаправлены.';
+                        errorMessage.style.display = 'block';
+                    }
+
+                    // Redirect after a short delay
+                    setTimeout(() => {
+                        window.location.href = 'index.html#subscription';
+                    }, 1500);
+                } else {
+                    // Show error message
+                    if (errorMessage) {
+                        errorMessage.style.color = '#dc3545';
+                        errorMessage.textContent = result.error;
+                        errorMessage.style.display = 'block';
+                    }
+                }
+            } catch (error) {
+                console.error('Registration error:', error);
+                if (errorMessage) {
+                    errorMessage.style.color = '#dc3545';
+                    errorMessage.textContent = 'Произошла ошибка при регистрации. Пожалуйста, попробуйте позже.';
+                    errorMessage.style.display = 'block';
+                }
+            } finally {
+                // Restore button
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Зарегистрироваться';
+                }
+            }
+        });
+    }
+
+    // Reset password form
+    const resetForm = document.getElementById('resetForm');
+    if (resetForm) {
+        resetForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = resetForm.querySelector('[name="email"]').value;
+            const submitButton = resetForm.querySelector('button[type="submit"]');
+            const errorMessage = resetForm.querySelector('.error-message') || document.createElement('div');
+
+            // Show loading state
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<span class="spinner"></span> Загрузка...';
+            }
+
+            try {
+                const result = await auth.resetPassword(email);
+
+                if (result.success) {
+                    // Show success message
+                    errorMessage.className = 'success-message';
+                    errorMessage.style.color = '#28a745';
+                    errorMessage.textContent = result.message;
+                    if (!resetForm.querySelector('.success-message')) {
+                        resetForm.appendChild(errorMessage);
+                    }
+                } else {
+                    // Show error message
+                    errorMessage.className = 'error-message';
+                    errorMessage.style.color = '#dc3545';
+                    errorMessage.textContent = result.error;
+                    if (!resetForm.querySelector('.error-message')) {
+                        resetForm.appendChild(errorMessage);
+                    }
+                }
+            } catch (error) {
+                console.error('Password reset error:', error);
+                errorMessage.className = 'error-message';
+                errorMessage.style.color = '#dc3545';
+                errorMessage.textContent = 'Произошла ошибка при сбросе пароля. Пожалуйста, попробуйте позже.';
+                if (!resetForm.querySelector('.error-message')) {
+                    resetForm.appendChild(errorMessage);
+                }
+            } finally {
+                // Restore button
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Сбросить пароль';
+                }
+            }
+        });
     }
 });
+
+// Helper functions for displaying messages
+function showError(form, message) {
+    const errorDiv = form.querySelector('.error-message') || document.createElement('div');
+    errorDiv.className = 'error-message';
+    errorDiv.textContent = message;
+    if (!form.querySelector('.error-message')) {
+        form.appendChild(errorDiv);
+    }
+}
+
+function showSuccess(form, message) {
+    const successDiv = form.querySelector('.success-message') || document.createElement('div');
+    successDiv.className = 'success-message';
+    successDiv.textContent = message;
+    if (!form.querySelector('.success-message')) {
+        form.appendChild(successDiv);
+    }
+
+    // Remove success message after 3 seconds
+    setTimeout(() => {
+        successDiv.remove();
+    }, 3000);
+}

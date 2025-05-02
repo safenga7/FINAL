@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-document.addEventListener("DOMContentLoaded", function () {
-    const chatBox = document.querySelector(".chat-box");
-    const inputField = document.querySelector(".message-input");
-    const sendButton = document.querySelector(".send-button");
-
-    if (!chatBox || !inputField || !sendButton) {
-        console.error("Error: One or more DOM elements not found!");
-        return;
-    }
-
-    const responses = {
-        "я грустный": "Мне жаль это слышать. Попробуйте поделиться своими чувствами с кем-то близким. Я здесь, чтобы поддержать вас. 💙",
-        "мне одиноко": "Одиночество бывает тяжёлым. Может быть, попробуете найти новое хобби или поговорите с другом? Я рядом! 🤗",
-        "у меня проблемы с деньгами": "Финансовые трудности могут быть стрессовыми. Может, стоит составить план или поговорить с кем-то, кто может помочь? 💰",
-        "я тревожусь": "Тревога - это нормально, особенно в сложных ситуациях. Глубокое дыхание и медитация могут помочь. Попробуйте! 🧘‍♂️",
-        "я устал": "Отдых очень важен. Дайте себе время расслабиться и восстановить силы. 😴",
-        "меня никто не понимает": "Иногда кажется, что никто не понимает нас, но это не так. Возможно, стоит поговорить с тем, кому вы доверяете? 💞",
-        "я не знаю, что делать": "Сделайте шаг назад и попробуйте подумать, какие есть варианты. Возможно, поможет совет друга. 🌟",
-        "я в стрессе": "Попробуйте отвлечься на что-то приятное: музыку, прогулку или книгу. Это поможет снизить уровень стресса. 🎶📖",
-        "у меня нет мотивации": "Попробуйте вспомнить, зачем вы начали. Маленькие шаги приведут вас к большой цели. 🚀",
-        "мне плохо": "Простите, что вы так себя чувствуете. Может быть, стоит поговорить с кем-то, кто может помочь? Я здесь для вас. 🤝"
-    };
-
-=======
 document.addEventListener("DOMContentLoaded", async function () {
     const chatBox = document.querySelector(".chat-box");
     const inputField = document.querySelector(".message-input");
@@ -248,7 +223,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         }, 5000);
     }
 
->>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
     function addMessage(text, sender) {
         const messageDiv = document.createElement("div");
         messageDiv.classList.add("message", sender);
@@ -265,31 +239,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         messageDiv.appendChild(messageText);
         chatBox.appendChild(messageDiv);
 
-<<<<<<< HEAD
-        chatBox.scrollTop = chatBox.scrollHeight;
-    }
-
-    function sendMessage() {
-        const userMessage = inputField.value.trim().toLowerCase();
-        if (userMessage === "") return;
-
-        addMessage(userMessage, "user");
-        inputField.value = "";
-
-        setTimeout(() => {
-            const matchedKey = Object.keys(responses).find(question => userMessage.includes(question));
-            const botResponse = matchedKey ? responses[matchedKey] : "Я здесь, чтобы поддержать вас. Расскажите мне больше. 💙";
-            addMessage(botResponse, "bot");
-        }, 500);
-    }
-
-    sendButton.addEventListener("click", sendMessage);
-    inputField.addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            sendMessage();
-        }
-    });
-=======
         // Ensure new message is visible
         chatBox.scrollTop = chatBox.scrollHeight;
 
@@ -375,7 +324,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             sendMessage();
         }
     });
-<<<<<<<< HEAD:script.js
 
     inputField.addEventListener("input", () => {
         sendTypingStatus(true);
@@ -397,35 +345,129 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Initial auth check
     checkAuth();
 });
-========
->>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
-});
-function filterContent() {
-    let input = document.getElementById("searchInput").value.toLowerCase();
-    let items = document.querySelectorAll(".library-item");
 
-    items.forEach(item => {
-        let text = item.innerText.toLowerCase();
-        item.style.display = text.includes(input) ? "block" : "none";
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > lastScroll) {
+        navbar.style.transform = 'translateY(-100%)';
+    } else {
+        navbar.style.transform = 'translateY(0)';
+    }
+    
+    lastScroll = currentScroll;
+});
+
+// Typing effect for header
+const text = document.querySelector('.typing-effect');
+if (text) {
+    const textContent = text.textContent;
+    text.textContent = '';
+    let i = 0;
+
+    function typeWriter() {
+        if (i < textContent.length) {
+            text.textContent += textContent.charAt(i);
+            i++;
+            setTimeout(typeWriter, 50);
+        }
+    }
+
+    typeWriter();
+}
+
+// Library content filtering
+function filterContent() {
+    const searchInput = document.getElementById('searchInput');
+    const filter = searchInput.value.toLowerCase();
+    const items = document.getElementsByClassName('library-item');
+
+    Array.from(items).forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? '' : 'none';
     });
 }
 
 function filterCategory(category) {
-    let items = document.querySelectorAll(".library-item");
-    let buttons = document.querySelectorAll(".category-btn");
+    const buttons = document.getElementsByClassName('category-btn');
+    const items = document.getElementsByClassName('library-item');
+    
+    // Update active button
+    Array.from(buttons).forEach(button => {
+        button.classList.remove('active');
+        if (button.textContent.toLowerCase().includes(category)) {
+            button.classList.add('active');
+        }
+    });
 
-    buttons.forEach(btn => btn.classList.remove("active"));
-    event.target.classList.add("active");
-
-    items.forEach(item => {
-        if (category === "all" || item.classList.contains(category)) {
-            item.style.display = "block";
+    // Filter items
+    Array.from(items).forEach(item => {
+        if (category === 'all') {
+            item.style.display = '';
         } else {
-            item.style.display = "none";
+            item.style.display = item.classList.contains(category) ? '' : 'none';
         }
     });
 }
-<<<<<<< HEAD
-=======
->>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0:public/script.js
->>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
+
+// Add animation classes on scroll
+const animatedElements = document.querySelectorAll('.subscription-plan, .doctor-card, .library-item');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fadeIn');
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+animatedElements.forEach(element => {
+    observer.observe(element);
+});
+
+// Handle mobile menu
+const menuButton = document.querySelector('.navbar-btn');
+const navbarRow = document.querySelector('.navbar-row');
+
+if (menuButton) {
+    menuButton.addEventListener('click', () => {
+        navbarRow.classList.toggle('show');
+    });
+}
+
+// Handle smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Background elements animation
+const backgroundElements = document.querySelectorAll('.background-element');
+
+backgroundElements.forEach((element, index) => {
+    element.style.animation = `float ${10 + index}s ease-in-out infinite`;
+});
+
+// Add floating animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes float {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(15px, -15px); }
+        100% { transform: translate(0, 0); }
+    }
+`;
+document.head.appendChild(style);

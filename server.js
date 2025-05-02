@@ -44,7 +44,7 @@ function saveUsers() {
 // Routes
 app.post('/api/users/register', (req, res) => {
     try {
-        const { name, email, password } = req.body;
+        const { name, email, password, phone, gender, birthdate } = req.body;
 
         // Check if user already exists
         const existingUser = users.find(user => user.email === email);
@@ -61,6 +61,9 @@ app.post('/api/users/register', (req, res) => {
             name,
             email,
             password,
+            phone: phone || '',
+            gender: gender || '',
+            birthdate: birthdate || '',
             role: 'user',
             subscriptionStatus: 'active',
             sessionsRemaining: 10

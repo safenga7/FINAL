@@ -3,207 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Регистрация - Рядом</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<body>
-    <div class="background-element"></div>
-    <div class="background-element"></div>
-    <div class="background-element"></div>
-    <div class="background-element"></div>
-    <div class="background-element"></div>
-    <div class="background-element"></div>
-    <div class="background-element"></div>
-    <div class="background-element"></div>
-
-    <nav class="navbar sticky top-0 bg-white" id="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <img width="30" height="45" alt="" src="images/icon.png" />
-                <span>Рядом</span>
-            </a>
-            <button class="navbar-btn" data-toggle="collapse" data-target="#navbar-row" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="sr-only">Открыть меню панели навигации</span>
-                <span class="block h-1 rounded-full bg-primary"></span>
-                <span class="block h-1 mt-1 rounded-full bg-primary"></span>
-                <span class="block h-1 mt-1 rounded-full bg-primary"></span>
-            </button>
-            <div class="navbar-row" id="navbar-row">
-                <ul class="navbar-col"></ul>
-                <ul class="navbar-col"></ul>
-                <ul class="navbar-col">
-                    <li>
-                        <a class="nav-link font-semibold" href="index.html#about">о нас</a>
-                    </li>
-                    <li>
-                        <a class="nav-link font-semibold" href="loogin.html">Вход</a>
-                    </li>
-                    <li>
-                        <a class="nav-link btn btn-primary" href="AI.html">Начать ИИ➔</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="auth-container">
-        <div class="auth-form-container">
-            <h2>Создать аккаунт</h2>
-            <p class="auth-description">Присоединяйтесь к нашему сообществу и получите доступ к профессиональной поддержке</p>
-
-            <form class="auth-form" id="registrationForm">
-                <div class="form-group">
-                    <label for="name">Имя</label>
-                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Электронная почта</label>
-                    <input type="email" id="email" name="email" required placeholder="Введите ваш email">
-                </div>
-
-                <div class="form-group">
-                    <label for="password">Пароль</label>
-                    <input type="password" id="password" name="password" required placeholder="Создайте пароль">
-                    <small>Минимум 8 символов, включая буквы и цифры</small>
-                </div>
-
-                <div class="form-group">
-                    <label for="confirm-password">Подтвердите пароль</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Повторите пароль">
-                </div>
-
-                <div class="form-check">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms">Я согласен с <a href="#">Условиями использования</a> и <a href="#">Политикой конфиденциальности</a></label>
-                </div>
-
-                <button type="submit" class="auth-button">Зарегистрироваться</button>
-            </form>
-
-            <script>
-                document.getElementById('registrationForm').addEventListener('submit', async function(event) {
-                    event.preventDefault();
-
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const password = document.getElementById('password').value;
-                    const confirmPassword = document.getElementById('confirm-password').value;
-                    const submitButton = this.querySelector('button[type="submit"]');
-
-                    if (password !== confirmPassword) {
-                        alert('Пароли не совпадают');
-                        return;
-                    }
-
-                    submitButton.disabled = true;
-                    submitButton.innerHTML = '<span class="spinner"></span> Загрузка...';
-
-                    try {
-                        console.log('Attempting registration with:', { name, email });
-
-                        const response = await fetch('http://localhost:5091/api/users/register', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({ name, email, password })
-                        });
-
-                        const data = await response.json();
-                        console.log('Registration response:', data);
-
-                        if (response.ok) {
-                            localStorage.setItem('token', data.token);
-                            alert('Регистрация успешна! Вы будете перенаправлены.');
-                            window.location.href = 'index.html#subscription';
-                        } else {
-                            alert(data.message || 'Ошибка регистрации. Пожалуйста, попробуйте снова.');
-                        }
-                    } catch (error) {
-                        console.error('Registration error:', error);
-                        alert('Произошла ошибка при регистрации. Пожалуйста, попробуйте позже.');
-                    } finally {
-                        submitButton.disabled = false;
-                        submitButton.innerHTML = 'Зарегистрироваться';
-                    }
-                });
-            </script>
-
-            <div class="auth-divider">
-                <span>или</span>
-            </div>
-
-            <div class="social-auth">
-                <button class="social-auth-btn google">
-                    <i class="fab fa-google"></i>
-                    Продолжить с Google
-                </button>
-                <button class="social-auth-btn facebook">
-                    <i class="fab fa-facebook-f"></i>
-                    Продолжить с Facebook
-                </button>
-            </div>
-
-            <div class="auth-links">
-                <span>Уже есть аккаунт? <a href="loogin.html">Войти</a></span>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-links">
-                <div class="footer-column">
-                    <a href="index.html">Главная</a>
-                    <a href="pay.html">Бизнес</a>
-                    <a href="index.html#about">О нас</a>
-                    <a href="#">Советы</a>
-                    <a href="#">Карьера</a>
-                    <a href="book.html">Найти терапевта</a>
-                </div>
-                <div class="footer-column">
-                    <a href="book.html">Найти терапевта</a>
-                    <a href="#"> Контакты</a>
-                    <a href="#">Для терапевтов</a>
-                </div>
-            </div>
-
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <a href="#"> Условия и положения</a>
-            <a href="#">Политика конфиденциальности</a>
-            <a href="#">Настройки обмена</a>
-            <a href="#">Доступность веб-сайта</a>
-            <span>© 2025 Рядом</span>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="form-validation.js"></script>
-    <script src="authentication.js"></script>
-</body>
-</html>
-=======
     <title>Регистрация | Рядом</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="newacc-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 8px;
+        }
 
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-
     <a href="index.html" class="back-button">⬅ Вернуться</a>
-    <!-- خلفية متحركة -->
+
     <div class="background">
         <div class="bubble"></div>
         <div class="bubble"></div>
@@ -216,25 +38,113 @@
     <div class="register-wrapper">
         <div class="register-container">
             <div class="logo">
-                
+                <img src="images/icon.png" alt="Рядом">
             </div>
             <h2 class="register-title">Создать аккаунт</h2>
-            <form action="#" method="post">
-                <input type="text" class="register-input" placeholder="Имя и фамилия" required>
-                <input type="email" class="register-input" placeholder="Email" required>
-                <input type="tel" class="register-input" placeholder="Номер телефона" required>
-                <input type="password" class="register-input" placeholder="Пароль" required>
-                <input type="password" class="register-input" placeholder="Подтвердите пароль" required>
-                
+            <div id="error-message" class="error-message" style="display: none; color: #dc3545; margin-bottom: 15px; text-align: center;"></div>
+            <form id="registrationForm" action="#" method="post">
+                <input type="text" id="name" name="name" class="register-input" placeholder="Имя и фамилия" required>
+                <input type="email" id="email" name="email" class="register-input" placeholder="Email" required>
+                <input type="tel" id="phone" name="phone" class="register-input" placeholder="Номер телефона" required>
+                <input type="password" id="password" name="password" class="register-input" placeholder="Пароль" required>
+                <input type="password" id="confirm-password" name="confirm-password" class="register-input" placeholder="Подтвердите пароль" required>
+
                 <div class="gender-select">
                     <label><input type="radio" name="gender" value="male" required> Мужской</label>
                     <label><input type="radio" name="gender" value="female" required> Женский</label>
                 </div>
 
-                <input type="date" class="register-input" required>
+                <input type="date" id="birthdate" name="birthdate" class="register-input" required>
 
                 <button type="submit" class="register-button">Зарегистрироваться</button>
             </form>
+
+            <script>
+                document.getElementById('registrationForm').addEventListener('submit', async function(event) {
+                    event.preventDefault();
+
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const password = document.getElementById('password').value;
+                    const confirmPassword = document.getElementById('confirm-password').value;
+                    const gender = document.querySelector('input[name="gender"]:checked')?.value;
+                    const birthdate = document.getElementById('birthdate').value;
+                    const submitButton = this.querySelector('button[type="submit"]');
+
+                    // Validate password
+                    if (password.length < 6) {
+                        const errorMessage = document.getElementById('error-message');
+                        errorMessage.style.color = '#dc3545';
+                        errorMessage.textContent = 'Пароль должен содержать не менее 6 символов';
+                        errorMessage.style.display = 'block';
+                        return;
+                    }
+
+                    // Validate password match
+                    if (password !== confirmPassword) {
+                        const errorMessage = document.getElementById('error-message');
+                        errorMessage.style.color = '#dc3545';
+                        errorMessage.textContent = 'Пароли не совпадают';
+                        errorMessage.style.display = 'block';
+                        return;
+                    }
+
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = '<span class="spinner"></span> Загрузка...';
+
+                    try {
+                        console.log('Attempting registration with:', { name, email, phone, gender, birthdate });
+
+                        const response = await fetch('http://localhost:5091/api/users/register', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                name,
+                                email,
+                                phone,
+                                password,
+                                gender,
+                                birthdate
+                            })
+                        });
+
+                        const data = await response.json();
+                        console.log('Registration response:', data);
+
+                        if (response.ok) {
+                            localStorage.setItem('token', data.token);
+                            // Show success message
+                            const errorMessage = document.getElementById('error-message');
+                            errorMessage.style.color = '#28a745';
+                            errorMessage.textContent = 'Регистрация успешна! Вы будете перенаправлены.';
+                            errorMessage.style.display = 'block';
+
+                            // Redirect after a short delay
+                            setTimeout(() => {
+                                window.location.href = 'index.html#subscription';
+                            }, 1500);
+                        } else {
+                            // Show error message
+                            const errorMessage = document.getElementById('error-message');
+                            errorMessage.style.color = '#dc3545';
+                            errorMessage.textContent = data.message || 'Ошибка регистрации. Пожалуйста, попробуйте снова.';
+                            errorMessage.style.display = 'block';
+                        }
+                    } catch (error) {
+                        console.error('Registration error:', error);
+                        const errorMessage = document.getElementById('error-message');
+                        errorMessage.style.color = '#dc3545';
+                        errorMessage.textContent = 'Произошла ошибка при регистрации. Пожалуйста, попробуйте позже.';
+                        errorMessage.style.display = 'block';
+                    } finally {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = 'Зарегистрироваться';
+                    }
+                });
+            </script>
 
             <p class="have-account">Уже есть аккаунт? <a href="login.html">Войти</a></p>
 
@@ -243,7 +153,7 @@
                     Регистрация через Google
                     <img src="images/icons8-google.svg" alt="Google">
                 </button>
-                
+
                 <button class="social-btn facebook" onclick="window.location.href='https://id.vk.com/signup'">
                     Регистрация через Vk
                     <img src="images/vk-logo-svgrepo-com.svg" alt="VK">
@@ -251,8 +161,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
->>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0

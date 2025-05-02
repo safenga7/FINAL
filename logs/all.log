@@ -23027,3 +23027,1040 @@
 2025-05-02 19:00:39:039 [32minfo[39m: [32mServer running on port 5090[39m
 2025-05-02 19:10:47:1047 [32minfo[39m: [32mWebSocket service initialized successfully[39m
 2025-05-02 19:10:47:1047 [32minfo[39m: [32mServer running on port 5090[39m
+2025-05-02 21:58:20:5820 [32minfo[39m: [32mWebSocket service initialized successfully[39m
+2025-05-02 21:58:20:5820 [32minfo[39m: [32mServer running on port 5001[39m
+2025-05-02 22:08:01:81 [32minfo[39m: [32mSIGINT signal received. Starting graceful shutdown...[39m
+2025-05-02 22:08:02:82 [31merror[39m: [31mTrying unknown #1 at 10:08:02 PM: Database retry:[39m
+2025-05-02 22:08:03:83 [32minfo[39m: [32mWebSocket service initialized successfully[39m
+2025-05-02 22:08:03:83 [32minfo[39m: [32mServer running on port 5001[39m
+2025-05-02 22:08:03:83 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:03:83 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:03:83 [31merror[39m: [31mTrying unknown #1 at 10:08:03 PM: Database retry:[39m
+2025-05-02 22:08:03:83 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:03:83 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:03:83 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:03:83 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:13:813 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:13:813 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:13:813 [31merror[39m: [31mTrying unknown #1 at 10:08:13 PM: Database retry:[39m
+2025-05-02 22:08:13:813 [31merror[39m: [31mTrying unknown #1 at 10:08:13 PM: Database retry:[39m
+2025-05-02 22:08:13:813 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:13:813 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:13:813 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:13:813 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:13:813 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:13:813 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:23:823 [31merror[39m: [31mTrying unknown #1 at 10:08:23 PM: Database retry:[39m
+2025-05-02 22:08:23:823 [31merror[39m: [31mTrying unknown #1 at 10:08:23 PM: Database retry:[39m
+2025-05-02 22:08:23:823 [31merror[39m: [31mTrying unknown #1 at 10:08:23 PM: Database retry:[39m
+2025-05-02 22:08:23:823 [31merror[39m: [31mTrying unknown #1 at 10:08:23 PM: Database retry:[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:23:823 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:34:834 [31merror[39m: [31mTrying unknown #1 at 10:08:34 PM: Database retry:[39m
+2025-05-02 22:08:34:834 [31merror[39m: [31mTrying unknown #1 at 10:08:34 PM: Database retry:[39m
+2025-05-02 22:08:34:834 [31merror[39m: [31mTrying unknown #1 at 10:08:34 PM: Database retry:[39m
+2025-05-02 22:08:34:834 [31merror[39m: [31mTrying unknown #1 at 10:08:34 PM: Database retry:[39m
+2025-05-02 22:08:34:834 [31merror[39m: [31mTrying unknown #1 at 10:08:34 PM: Database retry:[39m
+2025-05-02 22:08:34:834 [31merror[39m: [31mTrying unknown #1 at 10:08:34 PM: Database retry:[39m
+2025-05-02 22:08:34:834 [31merror[39m: [31mTrying unknown #1 at 10:08:34 PM: Database retry:[39m
+2025-05-02 22:08:34:834 [31merror[39m: [31mTrying unknown #1 at 10:08:34 PM: Database retry:[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:34:834 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:44:844 [31merror[39m: [31mTrying unknown #1 at 10:08:44 PM: Database retry:[39m
+2025-05-02 22:08:44:844 [31merror[39m: [31mTrying unknown #1 at 10:08:44 PM: Database retry:[39m
+2025-05-02 22:08:44:844 [31merror[39m: [31mTrying unknown #1 at 10:08:44 PM: Database retry:[39m
+2025-05-02 22:08:44:844 [31merror[39m: [31mTrying unknown #1 at 10:08:44 PM: Database retry:[39m
+2025-05-02 22:08:44:844 [31merror[39m: [31mTrying unknown #1 at 10:08:44 PM: Database retry:[39m
+2025-05-02 22:08:44:844 [31merror[39m: [31mTrying unknown #1 at 10:08:44 PM: Database retry:[39m
+2025-05-02 22:08:44:844 [31merror[39m: [31mTrying unknown #1 at 10:08:44 PM: Database retry:[39m
+2025-05-02 22:08:44:844 [31merror[39m: [31mTrying unknown #1 at 10:08:44 PM: Database retry:[39m
+2025-05-02 22:08:44:844 [31merror[39m: [31mTrying unknown #1 at 10:08:44 PM: Database retry:[39m
+2025-05-02 22:08:44:844 [31merror[39m: [31mTrying unknown #1 at 10:08:44 PM: Database retry:[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:44:844 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:08:54:854 [31merror[39m: [31mTrying unknown #1 at 10:08:54 PM: Database retry:[39m
+2025-05-02 22:08:54:854 [31merror[39m: [31mTrying unknown #1 at 10:08:54 PM: Database retry:[39m
+2025-05-02 22:08:54:854 [31merror[39m: [31mTrying unknown #1 at 10:08:54 PM: Database retry:[39m
+2025-05-02 22:08:54:854 [31merror[39m: [31mTrying unknown #1 at 10:08:54 PM: Database retry:[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:08:54:854 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:04:94 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:04:94 [31merror[39m: [31mTrying unknown #1 at 10:09:04 PM: Database retry:[39m
+2025-05-02 22:09:04:94 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:05:95 [31merror[39m: [31mTrying unknown #1 at 10:09:05 PM: Database retry:[39m
+2025-05-02 22:09:05:95 [31merror[39m: [31mTrying unknown #1 at 10:09:05 PM: Database retry:[39m
+2025-05-02 22:09:05:95 [31merror[39m: [31mTrying unknown #1 at 10:09:05 PM: Database retry:[39m
+2025-05-02 22:09:05:95 [31merror[39m: [31mTrying unknown #1 at 10:09:05 PM: Database retry:[39m
+2025-05-02 22:09:05:95 [31merror[39m: [31mTrying unknown #1 at 10:09:05 PM: Database retry:[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:05:95 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:15:915 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:15:915 [31merror[39m: [31mTrying unknown #1 at 10:09:15 PM: Database retry:[39m
+2025-05-02 22:09:15:915 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:16:916 [31merror[39m: [31mTrying unknown #1 at 10:09:16 PM: Database retry:[39m
+2025-05-02 22:09:16:916 [31merror[39m: [31mTrying unknown #1 at 10:09:16 PM: Database retry:[39m
+2025-05-02 22:09:16:916 [31merror[39m: [31mTrying unknown #1 at 10:09:16 PM: Database retry:[39m
+2025-05-02 22:09:16:916 [31merror[39m: [31mTrying unknown #1 at 10:09:16 PM: Database retry:[39m
+2025-05-02 22:09:16:916 [31merror[39m: [31mTrying unknown #1 at 10:09:16 PM: Database retry:[39m
+2025-05-02 22:09:16:916 [31merror[39m: [31mTrying unknown #1 at 10:09:16 PM: Database retry:[39m
+2025-05-02 22:09:16:916 [31merror[39m: [31mTrying unknown #1 at 10:09:16 PM: Database retry:[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:16:916 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:17:917 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:17:917 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:17:917 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:17:917 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:17:917 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:17:917 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:17:917 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:17:917 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:17:917 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:26:926 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:26:926 [31merror[39m: [31mTrying unknown #1 at 10:09:26 PM: Database retry:[39m
+2025-05-02 22:09:26:926 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:27:927 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:27:927 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:27:927 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:27:927 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:27:927 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:27:927 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:27:927 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:27:927 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:27:927 [31merror[39m: [31mTrying unknown #1 at 10:09:27 PM: Database retry:[39m
+2025-05-02 22:09:27:927 [31merror[39m: [31mTrying unknown #1 at 10:09:27 PM: Database retry:[39m
+2025-05-02 22:09:27:927 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:27:927 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:27:927 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:27:927 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:37:937 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:37:937 [31merror[39m: [31mTrying unknown #1 at 10:09:37 PM: Database retry:[39m
+2025-05-02 22:09:37:937 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:39:939 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:39:939 [31merror[39m: [31mTrying unknown #1 at 10:09:39 PM: Database retry:[39m
+2025-05-02 22:09:39:939 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:49:949 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:49:949 [31merror[39m: [31mTrying unknown #1 at 10:09:49 PM: Database retry:[39m
+2025-05-02 22:09:49:949 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:49:949 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:49:949 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:59:959 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:59:959 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:09:59:959 [31merror[39m: [31mTrying unknown #1 at 10:09:59 PM: Database retry:[39m
+2025-05-02 22:09:59:959 [31merror[39m: [31mTrying unknown #1 at 10:09:59 PM: Database retry:[39m
+2025-05-02 22:09:59:959 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:59:959 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:59:959 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:59:959 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:09:59:959 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:09:59:959 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:09:109 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:09:109 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:09:109 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:09:109 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:09:109 [31merror[39m: [31mTrying unknown #1 at 10:10:09 PM: Database retry:[39m
+2025-05-02 22:10:09:109 [31merror[39m: [31mTrying unknown #1 at 10:10:09 PM: Database retry:[39m
+2025-05-02 22:10:09:109 [31merror[39m: [31mTrying unknown #1 at 10:10:09 PM: Database retry:[39m
+2025-05-02 22:10:09:109 [31merror[39m: [31mTrying unknown #1 at 10:10:09 PM: Database retry:[39m
+2025-05-02 22:10:09:109 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:09:109 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:10:1010 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:10:1010 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:10:1010 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:10:1010 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:10:1010 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:10:1010 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:10:1010 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:10:1010 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:10:1010 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:10:1010 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:20:1020 [31merror[39m: [31mTrying unknown #1 at 10:10:20 PM: Database retry:[39m
+2025-05-02 22:10:20:1020 [31merror[39m: [31mTrying unknown #1 at 10:10:20 PM: Database retry:[39m
+2025-05-02 22:10:20:1020 [31merror[39m: [31mTrying unknown #1 at 10:10:20 PM: Database retry:[39m
+2025-05-02 22:10:20:1020 [31merror[39m: [31mTrying unknown #1 at 10:10:20 PM: Database retry:[39m
+2025-05-02 22:10:20:1020 [31merror[39m: [31mTrying unknown #1 at 10:10:20 PM: Database retry:[39m
+2025-05-02 22:10:20:1020 [31merror[39m: [31mTrying unknown #1 at 10:10:20 PM: Database retry:[39m
+2025-05-02 22:10:20:1020 [31merror[39m: [31mTrying unknown #1 at 10:10:20 PM: Database retry:[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:20:1020 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:30:1030 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:30:1030 [31merror[39m: [31mTrying unknown #1 at 10:10:30 PM: Database retry:[39m
+2025-05-02 22:10:30:1030 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:31:1031 [31merror[39m: [31mTrying unknown #1 at 10:10:31 PM: Database retry:[39m
+2025-05-02 22:10:31:1031 [31merror[39m: [31mTrying unknown #1 at 10:10:31 PM: Database retry:[39m
+2025-05-02 22:10:31:1031 [31merror[39m: [31mTrying unknown #1 at 10:10:31 PM: Database retry:[39m
+2025-05-02 22:10:31:1031 [31merror[39m: [31mTrying unknown #1 at 10:10:31 PM: Database retry:[39m
+2025-05-02 22:10:31:1031 [31merror[39m: [31mTrying unknown #1 at 10:10:31 PM: Database retry:[39m
+2025-05-02 22:10:31:1031 [31merror[39m: [31mTrying unknown #1 at 10:10:31 PM: Database retry:[39m
+2025-05-02 22:10:31:1031 [31merror[39m: [31mTrying unknown #1 at 10:10:31 PM: Database retry:[39m
+2025-05-02 22:10:31:1031 [31merror[39m: [31mTrying unknown #1 at 10:10:31 PM: Database retry:[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:31:1031 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:41:1041 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:41:1041 [31merror[39m: [31mTrying unknown #1 at 10:10:41 PM: Database retry:[39m
+2025-05-02 22:10:41:1041 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:42:1042 [31merror[39m: [31mTrying unknown #1 at 10:10:42 PM: Database retry:[39m
+2025-05-02 22:10:42:1042 [31merror[39m: [31mTrying unknown #1 at 10:10:42 PM: Database retry:[39m
+2025-05-02 22:10:42:1042 [31merror[39m: [31mTrying unknown #1 at 10:10:42 PM: Database retry:[39m
+2025-05-02 22:10:42:1042 [31merror[39m: [31mTrying unknown #1 at 10:10:42 PM: Database retry:[39m
+2025-05-02 22:10:42:1042 [31merror[39m: [31mTrying unknown #1 at 10:10:42 PM: Database retry:[39m
+2025-05-02 22:10:42:1042 [31merror[39m: [31mTrying unknown #1 at 10:10:42 PM: Database retry:[39m
+2025-05-02 22:10:42:1042 [31merror[39m: [31mTrying unknown #1 at 10:10:42 PM: Database retry:[39m
+2025-05-02 22:10:42:1042 [31merror[39m: [31mTrying unknown #1 at 10:10:42 PM: Database retry:[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:42:1042 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:52:1052 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:52:1052 [31merror[39m: [31mTrying unknown #1 at 10:10:52 PM: Database retry:[39m
+2025-05-02 22:10:52:1052 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:10:53:1053 [31merror[39m: [31mTrying unknown #1 at 10:10:53 PM: Database retry:[39m
+2025-05-02 22:10:53:1053 [31merror[39m: [31mTrying unknown #1 at 10:10:53 PM: Database retry:[39m
+2025-05-02 22:10:53:1053 [31merror[39m: [31mTrying unknown #1 at 10:10:53 PM: Database retry:[39m
+2025-05-02 22:10:53:1053 [31merror[39m: [31mTrying unknown #1 at 10:10:53 PM: Database retry:[39m
+2025-05-02 22:10:53:1053 [31merror[39m: [31mTrying unknown #1 at 10:10:53 PM: Database retry:[39m
+2025-05-02 22:10:53:1053 [31merror[39m: [31mTrying unknown #1 at 10:10:53 PM: Database retry:[39m
+2025-05-02 22:10:53:1053 [31merror[39m: [31mTrying unknown #1 at 10:10:53 PM: Database retry:[39m
+2025-05-02 22:10:53:1053 [31merror[39m: [31mTrying unknown #1 at 10:10:53 PM: Database retry:[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:10:53:1053 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:03:113 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:03:113 [31merror[39m: [31mTrying unknown #1 at 10:11:03 PM: Database retry:[39m
+2025-05-02 22:11:03:113 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:04:114 [31merror[39m: [31mTrying unknown #1 at 10:11:04 PM: Database retry:[39m
+2025-05-02 22:11:04:114 [31merror[39m: [31mTrying unknown #1 at 10:11:04 PM: Database retry:[39m
+2025-05-02 22:11:04:114 [31merror[39m: [31mTrying unknown #1 at 10:11:04 PM: Database retry:[39m
+2025-05-02 22:11:04:114 [31merror[39m: [31mTrying unknown #1 at 10:11:04 PM: Database retry:[39m
+2025-05-02 22:11:04:114 [31merror[39m: [31mTrying unknown #1 at 10:11:04 PM: Database retry:[39m
+2025-05-02 22:11:04:114 [31merror[39m: [31mTrying unknown #1 at 10:11:04 PM: Database retry:[39m
+2025-05-02 22:11:04:114 [31merror[39m: [31mTrying unknown #1 at 10:11:04 PM: Database retry:[39m
+2025-05-02 22:11:04:114 [31merror[39m: [31mTrying unknown #1 at 10:11:04 PM: Database retry:[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:04:114 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:14:1114 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:14:1114 [31merror[39m: [31mTrying unknown #1 at 10:11:14 PM: Database retry:[39m
+2025-05-02 22:11:14:1114 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:15:1115 [31merror[39m: [31mTrying unknown #1 at 10:11:15 PM: Database retry:[39m
+2025-05-02 22:11:15:1115 [31merror[39m: [31mTrying unknown #1 at 10:11:15 PM: Database retry:[39m
+2025-05-02 22:11:15:1115 [31merror[39m: [31mTrying unknown #1 at 10:11:15 PM: Database retry:[39m
+2025-05-02 22:11:15:1115 [31merror[39m: [31mTrying unknown #1 at 10:11:15 PM: Database retry:[39m
+2025-05-02 22:11:15:1115 [31merror[39m: [31mTrying unknown #1 at 10:11:15 PM: Database retry:[39m
+2025-05-02 22:11:15:1115 [31merror[39m: [31mTrying unknown #1 at 10:11:15 PM: Database retry:[39m
+2025-05-02 22:11:15:1115 [31merror[39m: [31mTrying unknown #1 at 10:11:15 PM: Database retry:[39m
+2025-05-02 22:11:15:1115 [31merror[39m: [31mTrying unknown #1 at 10:11:15 PM: Database retry:[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:15:1115 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:25:1125 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:25:1125 [31merror[39m: [31mTrying unknown #1 at 10:11:25 PM: Database retry:[39m
+2025-05-02 22:11:25:1125 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:26:1126 [31merror[39m: [31mTrying unknown #1 at 10:11:26 PM: Database retry:[39m
+2025-05-02 22:11:26:1126 [31merror[39m: [31mTrying unknown #1 at 10:11:26 PM: Database retry:[39m
+2025-05-02 22:11:26:1126 [31merror[39m: [31mTrying unknown #1 at 10:11:26 PM: Database retry:[39m
+2025-05-02 22:11:26:1126 [31merror[39m: [31mTrying unknown #1 at 10:11:26 PM: Database retry:[39m
+2025-05-02 22:11:26:1126 [31merror[39m: [31mTrying unknown #1 at 10:11:26 PM: Database retry:[39m
+2025-05-02 22:11:26:1126 [31merror[39m: [31mTrying unknown #1 at 10:11:26 PM: Database retry:[39m
+2025-05-02 22:11:26:1126 [31merror[39m: [31mTrying unknown #1 at 10:11:26 PM: Database retry:[39m
+2025-05-02 22:11:26:1126 [31merror[39m: [31mTrying unknown #1 at 10:11:26 PM: Database retry:[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:26:1126 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:36:1136 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:36:1136 [31merror[39m: [31mTrying unknown #1 at 10:11:36 PM: Database retry:[39m
+2025-05-02 22:11:36:1136 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:37:1137 [31merror[39m: [31mTrying unknown #1 at 10:11:37 PM: Database retry:[39m
+2025-05-02 22:11:37:1137 [31merror[39m: [31mTrying unknown #1 at 10:11:37 PM: Database retry:[39m
+2025-05-02 22:11:37:1137 [31merror[39m: [31mTrying unknown #1 at 10:11:37 PM: Database retry:[39m
+2025-05-02 22:11:37:1137 [31merror[39m: [31mTrying unknown #1 at 10:11:37 PM: Database retry:[39m
+2025-05-02 22:11:37:1137 [31merror[39m: [31mTrying unknown #1 at 10:11:37 PM: Database retry:[39m
+2025-05-02 22:11:37:1137 [31merror[39m: [31mTrying unknown #1 at 10:11:37 PM: Database retry:[39m
+2025-05-02 22:11:37:1137 [31merror[39m: [31mTrying unknown #1 at 10:11:37 PM: Database retry:[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:37:1137 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:38:1138 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:38:1138 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:38:1138 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:38:1138 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:38:1138 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:38:1138 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:38:1138 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:38:1138 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:38:1138 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:47:1147 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:47:1147 [31merror[39m: [31mTrying unknown #1 at 10:11:47 PM: Database retry:[39m
+2025-05-02 22:11:47:1147 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:48:1148 [31merror[39m: [31mTrying unknown #1 at 10:11:48 PM: Database retry:[39m
+2025-05-02 22:11:48:1148 [31merror[39m: [31mTrying unknown #1 at 10:11:48 PM: Database retry:[39m
+2025-05-02 22:11:48:1148 [31merror[39m: [31mTrying unknown #1 at 10:11:48 PM: Database retry:[39m
+2025-05-02 22:11:48:1148 [31merror[39m: [31mTrying unknown #1 at 10:11:48 PM: Database retry:[39m
+2025-05-02 22:11:48:1148 [31merror[39m: [31mTrying unknown #1 at 10:11:48 PM: Database retry:[39m
+2025-05-02 22:11:48:1148 [31merror[39m: [31mTrying unknown #1 at 10:11:48 PM: Database retry:[39m
+2025-05-02 22:11:48:1148 [31merror[39m: [31mTrying unknown #1 at 10:11:48 PM: Database retry:[39m
+2025-05-02 22:11:48:1148 [31merror[39m: [31mTrying unknown #1 at 10:11:48 PM: Database retry:[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:48:1148 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:11:49:1149 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:49:1149 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:49:1149 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:49:1149 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:49:1149 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:49:1149 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:49:1149 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:49:1149 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:49:1149 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:11:59:1159 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:11:59:1159 [31merror[39m: [31mTrying unknown #1 at 10:11:59 PM: Database retry:[39m
+2025-05-02 22:11:59:1159 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:00:120 [31merror[39m: [31mTrying unknown #1 at 10:12:00 PM: Database retry:[39m
+2025-05-02 22:12:00:120 [31merror[39m: [31mTrying unknown #1 at 10:12:00 PM: Database retry:[39m
+2025-05-02 22:12:00:120 [31merror[39m: [31mTrying unknown #1 at 10:12:00 PM: Database retry:[39m
+2025-05-02 22:12:00:120 [31merror[39m: [31mTrying unknown #1 at 10:12:00 PM: Database retry:[39m
+2025-05-02 22:12:00:120 [31merror[39m: [31mTrying unknown #1 at 10:12:00 PM: Database retry:[39m
+2025-05-02 22:12:00:120 [31merror[39m: [31mTrying unknown #1 at 10:12:00 PM: Database retry:[39m
+2025-05-02 22:12:00:120 [31merror[39m: [31mTrying unknown #1 at 10:12:00 PM: Database retry:[39m
+2025-05-02 22:12:00:120 [31merror[39m: [31mTrying unknown #1 at 10:12:00 PM: Database retry:[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:00:120 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:10:1210 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:10:1210 [31merror[39m: [31mTrying unknown #1 at 10:12:10 PM: Database retry:[39m
+2025-05-02 22:12:10:1210 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:11:1211 [31merror[39m: [31mTrying unknown #1 at 10:12:11 PM: Database retry:[39m
+2025-05-02 22:12:11:1211 [31merror[39m: [31mTrying unknown #1 at 10:12:11 PM: Database retry:[39m
+2025-05-02 22:12:11:1211 [31merror[39m: [31mTrying unknown #1 at 10:12:11 PM: Database retry:[39m
+2025-05-02 22:12:11:1211 [31merror[39m: [31mTrying unknown #1 at 10:12:11 PM: Database retry:[39m
+2025-05-02 22:12:11:1211 [31merror[39m: [31mTrying unknown #1 at 10:12:11 PM: Database retry:[39m
+2025-05-02 22:12:11:1211 [31merror[39m: [31mTrying unknown #1 at 10:12:11 PM: Database retry:[39m
+2025-05-02 22:12:11:1211 [31merror[39m: [31mTrying unknown #1 at 10:12:11 PM: Database retry:[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:11:1211 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:21:1221 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:21:1221 [31merror[39m: [31mTrying unknown #1 at 10:12:21 PM: Database retry:[39m
+2025-05-02 22:12:21:1221 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:22:1222 [31merror[39m: [31mTrying unknown #1 at 10:12:22 PM: Database retry:[39m
+2025-05-02 22:12:22:1222 [31merror[39m: [31mTrying unknown #1 at 10:12:22 PM: Database retry:[39m
+2025-05-02 22:12:22:1222 [31merror[39m: [31mTrying unknown #1 at 10:12:22 PM: Database retry:[39m
+2025-05-02 22:12:22:1222 [31merror[39m: [31mTrying unknown #1 at 10:12:22 PM: Database retry:[39m
+2025-05-02 22:12:22:1222 [31merror[39m: [31mTrying unknown #1 at 10:12:22 PM: Database retry:[39m
+2025-05-02 22:12:22:1222 [31merror[39m: [31mTrying unknown #1 at 10:12:22 PM: Database retry:[39m
+2025-05-02 22:12:22:1222 [31merror[39m: [31mTrying unknown #1 at 10:12:22 PM: Database retry:[39m
+2025-05-02 22:12:22:1222 [31merror[39m: [31mTrying unknown #1 at 10:12:22 PM: Database retry:[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:22:1222 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mSIGINT signal received. Starting graceful shutdown...[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mServer closed[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mTrying unknown #1 at 10:12:29 PM: Database retry:[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Database retry:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Unable to connect to the database:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mAttempting reconnection in 2 seconds...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mTrying unknown #1 at 10:12:29 PM: Database retry:[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Database retry:[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Unable to connect to the database:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mAttempting reconnection in 4 seconds...[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mTrying unknown #1 at 10:12:29 PM: Database retry:[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Database retry:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Unable to connect to the database:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mAttempting reconnection in 8 seconds...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mTrying unknown #1 at 10:12:29 PM: Database retry:[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Database retry:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Unable to connect to the database:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mAttempting reconnection in 16 seconds...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mTrying unknown #1 at 10:12:29 PM: Database retry:[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Database retry:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Unable to connect to the database:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mAttempting reconnection in 30 seconds...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mTrying unknown #1 at 10:12:29 PM: Database retry:[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Database retry:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Unable to connect to the database:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mAttempting reconnection in 30 seconds...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mTrying unknown #1 at 10:12:29 PM: Database retry:[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Database retry:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Unable to connect to the database:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mAttempting reconnection in 30 seconds...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mTrying unknown #1 at 10:12:29 PM: Database retry:[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Database retry:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mDatabase connection lost. Attempting to reconnect...[39m
+2025-05-02 22:12:29:1229 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Unable to connect to the database:[39m
+2025-05-02 22:12:29:1229 [32minfo[39m: [32mAttempting reconnection in 30 seconds...[39m
+2025-05-02 22:20:24:2024 [31merror[39m: [31mTrying unknown #1 at 10:20:24 PM: Database retry:[39m
+2025-05-02 22:20:24:2024 [32minfo[39m: [32mWebSocket service initialized successfully[39m
+2025-05-02 22:20:24:2024 [32minfo[39m: [32mServer running on port 5001[39m
+2025-05-02 22:20:24:2024 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:20:24:2024 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:20:24:2024 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:20:24:2024 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:20:54:2054 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:20:54:2054 [31merror[39m: [31mTrying unknown #1 at 10:20:54 PM: Database retry:[39m
+2025-05-02 22:20:54:2054 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:20:54:2054 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:21:24:2124 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:21:24:2124 [31merror[39m: [31mTrying unknown #1 at 10:21:24 PM: Database retry:[39m
+2025-05-02 22:21:25:2125 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:21:25:2125 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:21:55:2155 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:21:55:2155 [31merror[39m: [31mTrying unknown #1 at 10:21:55 PM: Database retry:[39m
+2025-05-02 22:21:55:2155 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:21:55:2155 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:22:25:2225 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:22:25:2225 [31merror[39m: [31mTrying unknown #1 at 10:22:25 PM: Database retry:[39m
+2025-05-02 22:22:25:2225 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:22:25:2225 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:23:44:2344 [31merror[39m: [31mTrying unknown #1 at 10:23:44 PM: Database retry:[39m
+2025-05-02 22:23:44:2344 [32minfo[39m: [32mWebSocket service initialized successfully[39m
+2025-05-02 22:23:45:2345 [32minfo[39m: [32mServer running on port 5001[39m
+2025-05-02 22:23:45:2345 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:23:45:2345 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:23:45:2345 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:23:45:2345 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:24:15:2415 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:24:15:2415 [31merror[39m: [31mTrying unknown #1 at 10:24:15 PM: Database retry:[39m
+2025-05-02 22:24:15:2415 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:24:15:2415 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:24:45:2445 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:24:45:2445 [31merror[39m: [31mTrying unknown #1 at 10:24:45 PM: Database retry:[39m
+2025-05-02 22:24:45:2445 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:24:45:2445 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:25:15:2515 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:25:15:2515 [31merror[39m: [31mTrying unknown #1 at 10:25:15 PM: Database retry:[39m
+2025-05-02 22:25:15:2515 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:25:15:2515 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:25:45:2545 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:25:45:2545 [31merror[39m: [31mTrying unknown #1 at 10:25:45 PM: Database retry:[39m
+2025-05-02 22:25:45:2545 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:25:45:2545 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:26:15:2615 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:26:15:2615 [31merror[39m: [31mTrying unknown #1 at 10:26:15 PM: Database retry:[39m
+2025-05-02 22:26:15:2615 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:26:15:2615 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:26:45:2645 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:26:45:2645 [31merror[39m: [31mTrying unknown #1 at 10:26:45 PM: Database retry:[39m
+2025-05-02 22:26:45:2645 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:26:45:2645 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:27:15:2715 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:27:15:2715 [31merror[39m: [31mTrying unknown #1 at 10:27:15 PM: Database retry:[39m
+2025-05-02 22:27:15:2715 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:27:15:2715 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:27:45:2745 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:27:45:2745 [31merror[39m: [31mTrying unknown #1 at 10:27:45 PM: Database retry:[39m
+2025-05-02 22:27:46:2746 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:27:46:2746 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 22:28:17:2817 [31merror[39m: [31mTrying unknown #1 at 10:28:17 PM: Database retry:[39m
+2025-05-02 22:28:17:2817 [32minfo[39m: [32mWebSocket service initialized successfully[39m
+2025-05-02 22:28:17:2817 [32minfo[39m: [32mServer running on port 5001[39m
+2025-05-02 22:28:17:2817 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:28:17:2817 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 22:28:17:2817 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 22:28:17:2817 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:24:26:2426 [31merror[39m: [31mTrying unknown #1 at 11:24:26 PM: Database retry:[39m
+2025-05-02 23:24:26:2426 [32minfo[39m: [32mWebSocket service initialized successfully[39m
+2025-05-02 23:24:26:2426 [32minfo[39m: [32mServer running on port 5001[39m
+2025-05-02 23:24:26:2426 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:24:26:2426 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:24:26:2426 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:24:26:2426 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:24:56:2456 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:24:56:2456 [31merror[39m: [31mTrying unknown #1 at 11:24:56 PM: Database retry:[39m
+2025-05-02 23:24:56:2456 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:24:56:2456 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:25:26:2526 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:25:26:2526 [31merror[39m: [31mTrying unknown #1 at 11:25:26 PM: Database retry:[39m
+2025-05-02 23:25:26:2526 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:25:26:2526 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /images/PROF.png[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /images/aitherpy.png[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /styles.css[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /images/icon.png[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /images/6.jpeg[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /images/2.jpeg[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /script.js[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /authentication.js[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /images/3.jpeg[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /form-validation.js[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /images/4.webp[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /images/5.jpeg[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /images/icon.png[39m
+2025-05-02 23:25:29:2529 [35mhttp[39m: [35mGET /api/csrf-token[39m
+2025-05-02 23:25:29:2529 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
+2025-05-02 23:25:30:2530 [35mhttp[39m: [35mGET /favicon.ico[39m
+2025-05-02 23:25:33:2533 [35mhttp[39m: [35mGET /login.html[39m
+2025-05-02 23:25:33:2533 [35mhttp[39m: [35mGET /images/icons8-google.svg[39m
+2025-05-02 23:25:33:2533 [35mhttp[39m: [35mGET /styles.css[39m
+2025-05-02 23:25:33:2533 [35mhttp[39m: [35mGET /images/icon.png[39m
+2025-05-02 23:25:34:2534 [35mhttp[39m: [35mGET /images/vk-logo-svgrepo-com.svg[39m
+2025-05-02 23:25:34:2534 [35mhttp[39m: [35mGET /script.js[39m
+2025-05-02 23:25:34:2534 [35mhttp[39m: [35mGET /form-validation.js[39m
+2025-05-02 23:25:34:2534 [35mhttp[39m: [35mGET /authentication.js[39m
+2025-05-02 23:25:34:2534 [35mhttp[39m: [35mGET /api/csrf-token[39m
+2025-05-02 23:25:34:2534 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /AI.html[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /styles.css[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /images/icon.png[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /images/hope.svg[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /script.js[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /form-validation.js[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /authentication.js[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /api/csrf-token[39m
+2025-05-02 23:25:56:2556 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /api/csrf-token[39m
+2025-05-02 23:25:56:2556 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /login.html[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /styles.css[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /images/icon.png[39m
+2025-05-02 23:25:56:2556 [35mhttp[39m: [35mGET /images/icons8-google.svg[39m
+2025-05-02 23:25:56:2556 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:25:56:2556 [31merror[39m: [31mTrying unknown #1 at 11:25:56 PM: Database retry:[39m
+2025-05-02 23:25:57:2557 [35mhttp[39m: [35mGET /images/vk-logo-svgrepo-com.svg[39m
+2025-05-02 23:25:57:2557 [35mhttp[39m: [35mGET /script.js[39m
+2025-05-02 23:25:57:2557 [35mhttp[39m: [35mGET /form-validation.js[39m
+2025-05-02 23:25:57:2557 [35mhttp[39m: [35mGET /authentication.js[39m
+2025-05-02 23:25:57:2557 [35mhttp[39m: [35mGET /api/csrf-token[39m
+2025-05-02 23:25:57:2557 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
+2025-05-02 23:25:57:2557 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:25:57:2557 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:26:27:2627 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:26:27:2627 [31merror[39m: [31mTrying unknown #1 at 11:26:27 PM: Database retry:[39m
+2025-05-02 23:26:27:2627 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:26:27:2627 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:26:57:2657 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:26:57:2657 [31merror[39m: [31mTrying unknown #1 at 11:26:57 PM: Database retry:[39m
+2025-05-02 23:26:57:2657 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:26:57:2657 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:27:27:2727 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:27:27:2727 [31merror[39m: [31mTrying unknown #1 at 11:27:27 PM: Database retry:[39m
+2025-05-02 23:27:27:2727 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:27:27:2727 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:27:57:2757 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:27:57:2757 [31merror[39m: [31mTrying unknown #1 at 11:27:57 PM: Database retry:[39m
+2025-05-02 23:27:57:2757 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:27:57:2757 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:28:27:2827 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:28:27:2827 [31merror[39m: [31mTrying unknown #1 at 11:28:27 PM: Database retry:[39m
+2025-05-02 23:28:27:2827 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:28:27:2827 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:28:57:2857 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:28:57:2857 [31merror[39m: [31mTrying unknown #1 at 11:28:57 PM: Database retry:[39m
+2025-05-02 23:28:57:2857 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:28:57:2857 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:29:28:2928 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:29:28:2928 [31merror[39m: [31mTrying unknown #1 at 11:29:28 PM: Database retry:[39m
+2025-05-02 23:29:28:2928 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:29:28:2928 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:29:58:2958 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:29:58:2958 [31merror[39m: [31mTrying unknown #1 at 11:29:58 PM: Database retry:[39m
+2025-05-02 23:29:58:2958 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:29:58:2958 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:30:28:3028 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:30:28:3028 [31merror[39m: [31mTrying unknown #1 at 11:30:28 PM: Database retry:[39m
+2025-05-02 23:30:28:3028 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:30:28:3028 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:30:58:3058 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:30:58:3058 [31merror[39m: [31mTrying unknown #1 at 11:30:58 PM: Database retry:[39m
+2025-05-02 23:30:58:3058 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:30:58:3058 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:31:28:3128 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:31:28:3128 [31merror[39m: [31mTrying unknown #1 at 11:31:28 PM: Database retry:[39m
+2025-05-02 23:31:28:3128 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:31:28:3128 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:31:58:3158 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:31:58:3158 [31merror[39m: [31mTrying unknown #1 at 11:31:58 PM: Database retry:[39m
+2025-05-02 23:31:58:3158 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:31:58:3158 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:32:28:3228 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:32:28:3228 [31merror[39m: [31mTrying unknown #1 at 11:32:28 PM: Database retry:[39m
+2025-05-02 23:32:28:3228 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:32:28:3228 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:32:58:3258 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:32:58:3258 [31merror[39m: [31mTrying unknown #1 at 11:32:58 PM: Database retry:[39m
+2025-05-02 23:32:58:3258 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:32:58:3258 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:33:28:3328 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:33:28:3328 [31merror[39m: [31mTrying unknown #1 at 11:33:28 PM: Database retry:[39m
+2025-05-02 23:33:29:3329 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:33:29:3329 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:33:59:3359 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:33:59:3359 [31merror[39m: [31mTrying unknown #1 at 11:33:59 PM: Database retry:[39m
+2025-05-02 23:33:59:3359 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:33:59:3359 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:34:29:3429 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:34:29:3429 [31merror[39m: [31mTrying unknown #1 at 11:34:29 PM: Database retry:[39m
+2025-05-02 23:34:29:3429 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:34:29:3429 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:34:59:3459 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:34:59:3459 [31merror[39m: [31mTrying unknown #1 at 11:34:59 PM: Database retry:[39m
+2025-05-02 23:34:59:3459 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:34:59:3459 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:35:29:3529 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:35:29:3529 [31merror[39m: [31mTrying unknown #1 at 11:35:29 PM: Database retry:[39m
+2025-05-02 23:35:29:3529 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:35:29:3529 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:35:59:3559 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:35:59:3559 [31merror[39m: [31mTrying unknown #1 at 11:35:59 PM: Database retry:[39m
+2025-05-02 23:35:59:3559 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:35:59:3559 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:36:29:3629 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:36:29:3629 [31merror[39m: [31mTrying unknown #1 at 11:36:29 PM: Database retry:[39m
+2025-05-02 23:36:29:3629 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:36:29:3629 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:36:59:3659 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:36:59:3659 [31merror[39m: [31mTrying unknown #1 at 11:36:59 PM: Database retry:[39m
+2025-05-02 23:36:59:3659 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:36:59:3659 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:37:29:3729 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:37:29:3729 [31merror[39m: [31mTrying unknown #1 at 11:37:29 PM: Database retry:[39m
+2025-05-02 23:37:29:3729 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:37:29:3729 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:37:59:3759 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:37:59:3759 [31merror[39m: [31mTrying unknown #1 at 11:37:59 PM: Database retry:[39m
+2025-05-02 23:38:00:380 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:38:00:380 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:38:30:3830 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:38:30:3830 [31merror[39m: [31mTrying unknown #1 at 11:38:30 PM: Database retry:[39m
+2025-05-02 23:38:30:3830 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:38:30:3830 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:38:33:3833 [35mhttp[39m: [35mGET /login.html[39m
+2025-05-02 23:38:33:3833 [35mhttp[39m: [35mGET /styles.css[39m
+2025-05-02 23:38:33:3833 [35mhttp[39m: [35mGET /images/icon.png[39m
+2025-05-02 23:38:33:3833 [35mhttp[39m: [35mGET /images/icons8-google.svg[39m
+2025-05-02 23:38:33:3833 [35mhttp[39m: [35mGET /images/vk-logo-svgrepo-com.svg[39m
+2025-05-02 23:38:33:3833 [35mhttp[39m: [35mGET /script.js[39m
+2025-05-02 23:38:33:3833 [35mhttp[39m: [35mGET /form-validation.js[39m
+2025-05-02 23:38:33:3833 [35mhttp[39m: [35mGET /authentication.js[39m
+2025-05-02 23:38:33:3833 [35mhttp[39m: [35mGET /api/csrf-token[39m
+2025-05-02 23:38:33:3833 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
+2025-05-02 23:38:36:3836 [35mhttp[39m: [35mGET /login.html[39m
+2025-05-02 23:38:36:3836 [35mhttp[39m: [35mGET /styles.css[39m
+2025-05-02 23:38:36:3836 [35mhttp[39m: [35mGET /images/icon.png[39m
+2025-05-02 23:38:36:3836 [35mhttp[39m: [35mGET /images/icons8-google.svg[39m
+2025-05-02 23:38:36:3836 [35mhttp[39m: [35mGET /images/vk-logo-svgrepo-com.svg[39m
+2025-05-02 23:38:36:3836 [35mhttp[39m: [35mGET /script.js[39m
+2025-05-02 23:38:36:3836 [35mhttp[39m: [35mGET /form-validation.js[39m
+2025-05-02 23:38:36:3836 [35mhttp[39m: [35mGET /authentication.js[39m
+2025-05-02 23:38:36:3836 [35mhttp[39m: [35mGET /api/csrf-token[39m
+2025-05-02 23:38:36:3836 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
+2025-05-02 23:39:00:390 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:39:00:390 [31merror[39m: [31mTrying unknown #1 at 11:39:00 PM: Database retry:[39m
+2025-05-02 23:39:00:390 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:39:00:390 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:39:30:3930 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:39:30:3930 [31merror[39m: [31mTrying unknown #1 at 11:39:30 PM: Database retry:[39m
+2025-05-02 23:39:30:3930 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:39:30:3930 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:40:00:400 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:40:00:400 [31merror[39m: [31mTrying unknown #1 at 11:40:00 PM: Database retry:[39m
+2025-05-02 23:40:00:400 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:40:00:400 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:40:13:4013 [35mhttp[39m: [35mGET /styles.css[39m
+2025-05-02 23:40:28:4028 [32minfo[39m: [32mReceived shutdown signal. Starting graceful shutdown...[39m
+2025-05-02 23:40:28:4028 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:40:28:4028 [31merror[39m: [31mTrying unknown #1 at 11:40:28 PM: Database retry:[39m
+2025-05-02 23:40:28:4028 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Database retry:[39m
+2025-05-02 23:40:28:4028 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Unable to connect to the database:[39m
+2025-05-02 23:40:28:4028 [32minfo[39m: [32mAttempting reconnection in 4.5 seconds...[39m
+2025-05-02 23:40:28:4028 [31merror[39m: [31mTrying unknown #1 at 11:40:28 PM: Database retry:[39m
+2025-05-02 23:40:28:4028 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Database retry:[39m
+2025-05-02 23:40:28:4028 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Unable to connect to the database:[39m
+2025-05-02 23:40:28:4028 [32minfo[39m: [32mAttempting reconnection in 6.75 seconds...[39m
+2025-05-02 23:40:29:4029 [31merror[39m: [31mTrying unknown #1 at 11:40:29 PM: Database retry:[39m
+2025-05-02 23:40:29:4029 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Database retry:[39m
+2025-05-02 23:40:29:4029 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Unable to connect to the database:[39m
+2025-05-02 23:40:29:4029 [32minfo[39m: [32mAttempting reconnection in 10.125 seconds...[39m
+2025-05-02 23:40:29:4029 [31merror[39m: [31mTrying unknown #1 at 11:40:29 PM: Database retry:[39m
+2025-05-02 23:40:29:4029 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Database retry:[39m
+2025-05-02 23:40:29:4029 [31merror[39m: [31mError: ConnectionManager.getConnection was called after the connection manager was closed!: Unable to connect to the database:[39m
+2025-05-02 23:40:29:4029 [32minfo[39m: [32mAttempting reconnection in 15.1875 seconds...[39m
+2025-05-02 23:40:29:4029 [31merror[39m: [31mTrying unknown #1 at 11:40:29 PM: Database retry:[39m
+2025-05-02 23:41:08:418 [31merror[39m: [31mTrying unknown #1 at 11:41:08 PM: Database retry:[39m
+2025-05-02 23:41:09:419 [32minfo[39m: [32mWebSocket service initialized successfully[39m
+2025-05-02 23:41:09:419 [32minfo[39m: [32mServer running on port 5001[39m
+2025-05-02 23:41:09:419 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:41:09:419 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:41:09:419 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:41:09:419 [32minfo[39m: [32mDatabase connection established successfully.[39m
+2025-05-02 23:41:36:4136 [35mhttp[39m: [35mGET /[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /styles.css[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /images/icon.png[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /images/aitherpy.png[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /images/PROF.png[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /images/6.jpeg[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /images/2.jpeg[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /script.js[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /form-validation.js[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /authentication.js[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /images/3.jpeg[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /images/4.webp[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /images/5.jpeg[39m
+2025-05-02 23:41:37:4137 [35mhttp[39m: [35mGET /api/csrf-token[39m
+2025-05-02 23:41:37:4137 [31merror[39m: [31mTypeError: generateCsrfToken is not a function: Error generating CSRF token:[39m
+2025-05-02 23:41:39:4139 [32minfo[39m: [32mDatabase connection lost.[39m
+2025-05-02 23:41:39:4139 [31merror[39m: [31mTrying unknown #1 at 11:41:39 PM: Database retry:[39m
+2025-05-02 23:41:39:4139 [32minfo[39m: [32mDatabase connection established.[39m
+2025-05-02 23:41:39:4139 [32minfo[39m: [32mDatabase connection established successfully.[39m

@@ -8,10 +8,11 @@ export const securityHeaders = helmet({
         directives: {
             defaultSrc: ["'self'"],
             scriptSrc: ["'self'", "'unsafe-inline'", 'js.stripe.com'],
-            styleSrc: ["'self'", "'unsafe-inline'"],
+            styleSrc: ["'self'", "'unsafe-inline'", 'fonts.googleapis.com'],
             imgSrc: ["'self'", 'data:', 'https:'],
             connectSrc: ["'self'", process.env.AI_MODEL_URL],
             frameSrc: ['js.stripe.com'],
+            fontSrc: ["'self'", 'fonts.gstatic.com'],
             objectSrc: ["'none'"]
         }
     },
@@ -28,14 +29,15 @@ export const securityHeaders = helmet({
     xssFilter: true
 });
 
-// CSRF Protection with csrf-csrf
+// CSRF Protection configuration
 const { doubleCsrfProtection, generateToken } = doubleCsrf({
     getSecret: () => process.env.JWT_SECRET,
-    cookieName: "x-csrf-token",
+    cookieName: "XSRF-TOKEN",
     cookieOptions: {
-        httpOnly: true,
-        sameSite: "strict",
-        secure: process.env.NODE_ENV === "production"
+        httpOnly: false,
+        sameSite: process.env.NODE_ENV === "production" ? "strict" : "lax",
+        secure: process.env.NODE_ENV === "production",
+        path: "/"
     },
     size: 64,
     ignoredMethods: ["GET", "HEAD", "OPTIONS"],
@@ -55,14 +57,38 @@ export const securityMiddleware = [
         next();
     },
 
-    // Validate content type for specific routes
+    // Validate content type for specific methods
     (req, res, next) => {
         if (req.method === 'POST' || req.method === 'PUT') {
-            if (!req.is('application/json') && !req.is('multipart/form-data')) {
+            const contentType = req.headers['content-type'];
+            if (!contentType || 
+                (!contentType.includes('application/json') && 
+                 !contentType.includes('multipart/form-data') &&
+                 !contentType.includes('application/x-www-form-urlencoded'))) {
                 return res.status(415).json({
                     error: 'Unsupported Media Type'
                 });
             }
+        }
+        next();
+    },
+
+    // Validate request body size
+    (req, res, next) => {
+        const contentLength = parseInt(req.headers['content-length'], 10);
+        if (contentLength > 10 * 1024 * 1024) { // 10MB limit
+            return res.status(413).json({
+                error: 'Request entity too large'
+            });
+        }
+        next();
+    },
+
+    // Add security headers for specific routes
+    (req, res, next) => {
+        if (req.path.startsWith('/api/')) {
+            res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+            res.setHeader('Pragma', 'no-cache');
         }
         next();
     }

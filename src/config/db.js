@@ -1,7 +1,15 @@
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
+import { logInfo, logError } from '../services/loggingService.js';
 
 dotenv.config();
+
+// Connection state tracking
+let isConnecting = false;
+let isConnected = false;
+let reconnectTimer = null;
+const maxReconnectAttempts = 5;
+let reconnectAttempts = 0;
 
 const sequelize = new Sequelize(
     process.env.DB_NAME,
@@ -11,63 +19,113 @@ const sequelize = new Sequelize(
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,
         dialect: 'postgres',
-        logging: process.env.NODE_ENV === 'development' ? console.log : false,
+        logging: false,
         pool: {
             max: 5,
             min: 0,
-            acquire: 30000,
-            idle: 10000
+            acquire: 60000,
+            idle: 20000,
+            evict: 30000
         },
         dialectOptions: {
             ssl: process.env.DB_SSL === 'true' ? {
                 require: true,
                 rejectUnauthorized: false
-            } : false
+            } : false,
+            connectTimeout: 30000,
+            keepAlive: true
         },
         retry: {
             max: 3,
+            timeout: 30000,
             match: [
                 /SequelizeConnectionError/,
                 /SequelizeConnectionRefusedError/,
                 /SequelizeHostNotFoundError/,
                 /SequelizeHostNotReachableError/,
                 /SequelizeInvalidConnectionError/,
-                /SequelizeConnectionTimedOutError/
+                /SequelizeConnectionTimedOutError/,
+                /TimeoutError/,
+                /deadlock detected/i
             ],
-            backoffBase: 1000,
-            backoffExponent: 1.5,
+            backoffBase: 3000,
+            backoffExponent: 1.2,
+            report: (msg) => logError('Database retry:', msg)
         }
     }
 );
 
-// Handle unexpected errors
-sequelize.authenticate()
-    .then(() => {
-        console.log('Database connection established successfully.');
-    })
-    .catch(err => {
-        console.error('Unable to connect to the database:', err);
-        process.exit(1); // Exit if we can't connect to the database
-    });
+const connectWithRetry = async () => {
+    // Prevent multiple simultaneous connection attempts
+    if (isConnecting) return;
+    isConnecting = true;
 
-// Handle connection lost and attempt reconnection
-sequelize.beforeDisconnect(async (connection) => {
-    console.log('Database connection lost. Attempting to reconnect...');
+    try {
+        await sequelize.authenticate();
+        isConnected = true;
+        isConnecting = false;
+        reconnectAttempts = 0;
+        if (reconnectTimer) {
+            clearTimeout(reconnectTimer);
+            reconnectTimer = null;
+        }
+        logInfo('Database connection established successfully.');
+    } catch (err) {
+        isConnecting = false;
+        logError('Unable to connect to the database:', err);
+        
+        if (reconnectAttempts < maxReconnectAttempts) {
+            reconnectAttempts++;
+            const delay = Math.min(3000 * Math.pow(1.5, reconnectAttempts), 30000);
+            logInfo(`Attempting reconnection in ${delay/1000} seconds...`);
+            
+            if (reconnectTimer) clearTimeout(reconnectTimer);
+            reconnectTimer = setTimeout(connectWithRetry, delay);
+        } else {
+            logError('Max reconnection attempts reached. Exiting...');
+            process.exit(1);
+        }
+    }
+};
+
+// Handle connection events
+sequelize.afterConnect(() => {
+    if (!isConnected) {
+        isConnected = true;
+        logInfo('Database connection established.');
+    }
 });
 
-sequelize.afterDisconnect(async (connection) => {
-    console.log('Reconnection attempt completed.');
+sequelize.beforeDisconnect(() => {
+    if (isConnected) {
+        isConnected = false;
+        logInfo('Database connection lost.');
+    }
 });
 
+// Only attempt reconnect if we're not already trying to connect
+sequelize.afterDisconnect(() => {
+    if (!isConnected && !isConnecting && reconnectAttempts < maxReconnectAttempts) {
+        connectWithRetry();
+    }
+});
+
+// Graceful shutdown
 process.on('SIGINT', async () => {
     try {
+        if (reconnectTimer) {
+            clearTimeout(reconnectTimer);
+        }
         await sequelize.close();
-        console.log('Database connection closed.');
+        logInfo('Database connection closed gracefully.');
         process.exit(0);
     } catch (error) {
-        console.error('Error closing database connection:', error);
+        logError('Error closing database connection:', error);
         process.exit(1);
     }
 });
+
+// Initial connection
+connectWithRetry();
 
 export { sequelize };

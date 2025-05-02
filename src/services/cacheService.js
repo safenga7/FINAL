@@ -6,15 +6,24 @@ dotenv.config();
 const redis = new Redis({
     host: process.env.REDIS_HOST || 'localhost',
     port: process.env.REDIS_PORT || 6379,
-    password: process.env.REDIS_PASSWORD,
+    password: process.env.REDIS_PASSWORD || undefined, // Only set password if configured
     retryStrategy: (times) => {
-        const delay = Math.min(times * 50, 2000);
+        const maxRetryTime = 2000; // Max retry delay of 2 seconds
+        const delay = Math.min(times * 50, maxRetryTime);
         return delay;
+    },
+    reconnectOnError: (err) => {
+        const targetError = 'READONLY';
+        if (err.message.includes(targetError)) {
+            return true; // Only reconnect on specific errors
+        }
+        return false;
     }
 });
 
 redis.on('error', (err) => console.error('Redis Client Error:', err));
 redis.on('connect', () => console.log('Redis Client Connected'));
+redis.on('reconnecting', () => console.log('Redis Client Reconnecting...'));
 
 export const cacheGet = async (key) => {
     try {

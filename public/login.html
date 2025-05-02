@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вход | Рядом</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         .loader {
@@ -27,6 +27,16 @@
             font-size: 12px;
             margin-top: 5px;
             display: block;
+        }
+
+        .error-message {
+            color: #dc3545;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 15px;
+            text-align: center;
         }
     </style>
 </head>
@@ -101,11 +111,20 @@
                                 window.location.href = 'index.html#subscription';
                             }
                         } else {
-                            document.getElementById('email-error').textContent = data.message || 'Ошибка входа. Пожалуйста, проверьте ваши данные.';
+                            // Display error message
+                            const errorMessage = document.getElementById('error-message');
+                            errorMessage.textContent = data.message || 'Ошибка входа. Пожалуйста, проверьте ваши данные.';
+                            errorMessage.style.display = 'block';
+
+                            // Clear specific field errors
+                            document.getElementById('email-error').textContent = data.errors?.email || '';
+                            document.getElementById('password-error').textContent = data.errors?.password || '';
                         }
                     } catch (error) {
                         console.error('Login error:', error);
-                        document.getElementById('email-error').textContent = 'Произошла ошибка при входе. Пожалуйста, попробуйте позже.';
+                        const errorMessage = document.getElementById('error-message');
+                        errorMessage.textContent = 'Произошла ошибка при входе. Пожалуйста, попробуйте позже.';
+                        errorMessage.style.display = 'block';
                     } finally {
                         // Hide loading state
                         buttonText.style.display = 'inline';
