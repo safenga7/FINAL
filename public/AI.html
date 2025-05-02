@@ -17,12 +17,17 @@
     </div>
 
 
+<<<<<<< HEAD
     <!-- Chat header -->
+=======
+    <!-- ✅ هيدر الشات -->
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
     <header class="chat-header">
         <div class="logo">
             <img src="images/icon.png" alt="Рядом">
             <h1 class="chat-title">РЯДОМ</h1>
         </div>
+<<<<<<< HEAD
     </header>
 
     <!-- Chat container -->
@@ -39,11 +44,51 @@
         <div class="chat-input">
             <input type="text" class="message-input" placeholder="Введите сообщение...">
             <button class="send-button">➤</button>
+=======
+        <div class="session-info">
+            <span id="sessionsRemaining"></span>
+        </div>
+    </header>
+    
+    <!-- ✅ صندوق الدردشة -->
+    <div class="chat-container">
+        <a href="index.html" class="back-button">⬅ Вернуться</a>    <!-- ✅ خلفية متحركة -->
+
+        <div class="chat-box">
+            <div class="message bot">
+                <img src="images/hope.svg" alt="Bot">
+                <p>Привет! Как я могу вам помочь?</p>
+            </div>
+            <div id="typingIndicator" class="message bot typing" style="display: none;">
+                <img src="images/hope.svg" alt="Bot">
+                <div class="typing-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="chat-input">
+            <input type="text" class="message-input" placeholder="Введите сообщение..." aria-label="Введите сообщение">
+            <button class="send-button" aria-label="Отправить сообщение">
+                <span class="button-text">➤</span>
+                <div class="button-loader" style="display: none;"></div>
+            </button>
+        </div>
+
+        <div id="errorMessage" class="error-popup" style="display: none;">
+            <p></p>
+            <button class="close-error">✕</button>
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
         </div>
     </div>
 
     <script src="script.js"></script>
+<<<<<<< HEAD
     <script src="form-validation.js"></script>
     <script src="authentication.js"></script>
+=======
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 </body>
 </html>

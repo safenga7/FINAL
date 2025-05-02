@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+<<<<<<< HEAD
 import { createServer } from 'http';
 import userRoutes from './routes/userRoutes.js';
 import psychologistRoutes from './routes/psychologistRoutes.js';
@@ -15,6 +16,13 @@ import { sanitizeRequest } from './middleware/sanitization.js';
 import { initializeWebSocket } from './services/websocketService.js';
 import cookieParser from 'cookie-parser';
 import Logger, { logHttpRequest, logInfo, logError } from './services/loggingService.js';
+=======
+import path from 'path';
+import { sequelize } from './config/db.js'; // تأكد من أن هذا الملف يحتوي على اتصال Sequelize بـ PostgreSQL
+import userRoutes from './routes/userRoutes.js';
+import psychologistRoutes from './routes/psychologistRoutes.js';
+import sessionRoutes from './routes/sessionRoutes.js';
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 
 dotenv.config();
 
@@ -96,6 +104,7 @@ app.use('/api/payments/webhook', express.raw({ type: 'application/json' }));
 // Regular JSON parsing for other routes
 app.use(express.json());
 
+<<<<<<< HEAD
 // Request sanitization - after body parsing but before routes
 app.use(sanitizeRequest);
 
@@ -129,12 +138,25 @@ app.use('/api(?!/payments/webhook)', apiLimiter);
 console.log('⚠️ CSRF protection disabled for testing');
 
 // Routes
+=======
+// الاتصال بقاعدة البيانات PostgreSQL
+sequelize.authenticate()
+  .then(() => console.log('Connected to PostgreSQL'))
+  .catch(err => console.error('Could not connect to PostgreSQL', err));
+
+// تعريف مجلد الـ static files (مثل HTML, CSS, JS)
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, 'public')));
+
+// تعريف الـ routes
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 app.use('/api/users', userRoutes);
 app.use('/api/psychologists', psychologistRoutes);
 app.use('/api/sessions', sessionRoutes);
 app.use('/api/payments', paymentRoutes);
 app.use('/api/ai', aiRoutes);
 
+<<<<<<< HEAD
 // Error handling middleware
 app.use(errorHandler);
 
@@ -212,4 +234,50 @@ process.on('SIGINT', () => shutdown('SIGINT'));
 process.on('uncaughtException', (error) => {
     logError('Uncaught Exception:', error);
     shutdown('uncaughtException');
+=======
+// صفحة التسجيل
+app.post('/api/register', async (req, res) => {
+  const { username, email, password } = req.body;
+
+  try {
+    const user = await sequelize.models.User.create({ username, email, password });
+    res.status(201).json({ message: 'User registered successfully', user });
+  } catch (err) {
+    console.error('Error registering user:', err);
+    res.status(500).json({ message: 'Error registering user', error: err.message });
+  }
+});
+
+// صفحة تسجيل الدخول
+app.post('/api/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const user = await sequelize.models.User.findOne({ where: { email, password } });
+    if (user) {
+      res.status(200).json({ message: 'Login successful', user });
+    } else {
+      res.status(401).json({ message: 'Invalid credentials' });
+    }
+  } catch (err) {
+    console.error('Error logging in:', err);
+    res.status(500).json({ message: 'Error logging in', error: err.message });
+  }
+});
+
+// Serve static files (للتطبيقات التي تستخدم React أو Vue أو غيرها)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Middleware لإدارة الأخطاء
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ message: 'Something went wrong!', error: err.message });
+});
+
+// تشغيل الخادم
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 });

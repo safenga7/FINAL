@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background: linear-gradient(270deg, #0f172a, #1e3a8a, #60a5fa, #0f172a);
     background-size: 800% 800%;
@@ -15,6 +16,64 @@ body {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+=======
+
+body {
+    background: linear-gradient(135deg, #0f172a, #0d2054, #1959c0, #074591);
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 0px;
+    margin: 0px;
+    flex-direction: column; 
+    
+}
+.background-element {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 10s infinite alternate ease-in-out;
+    filter: blur(10px);
+}
+
+/* مواقع عشوائية للعناصر */
+.background-element:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-duration: 8s;
+}
+.background-element:nth-child(2) {
+    top: 50%;
+    left: 70%;
+    animation-duration: 12s;
+}
+.background-element:nth-child(3) {
+    top: 80%;
+    left: 30%;
+    animation-duration: 10s;
+}
+@keyframes glow {
+    from {
+        background: rgba(255, 255, 255, 0.2);
+    }
+    to {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* تحريك العناصر */
+@keyframes float {
+    from {
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-50px) scale(1.2);
+    }
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 /* اللوجو */
 header {
@@ -110,7 +169,11 @@ h2 {
     transition: color 0.3s;
     text-decoration: none;
     font-weight: 600;
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 
 .nav-link:hover {
@@ -147,7 +210,11 @@ h2 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
+<<<<<<< HEAD
     color: #ffffff;
+=======
+    color: #ffffff; 
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 
 
@@ -191,7 +258,10 @@ h2 {
 .img-container img {
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     cursor: pointer; /* لجعل المؤشر يظهر كيد عند التحويم */
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 
 .img-container img:hover {
@@ -199,6 +269,7 @@ h2 {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* ظل جميل */
 }
 
+<<<<<<< HEAD
 .img-container a::after {
     content: "🔗";
     position: absolute;
@@ -230,12 +301,15 @@ h2 {
 }
 
 
+=======
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 .A, .B {
     border-radius: 10%;
     height: 400px;
     width: 400px;
     margin: 50px; /* إزالة الهوامش الفردية السابقة */
 }
+<<<<<<< HEAD
 h4 {
     text-align: center;
     color: #60a5fa; /* أزرق فاتح مناسب للستايل */
@@ -254,6 +328,8 @@ h4 {
         transform: translateY(0);
     }
 }
+=======
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 .subscription-container {
     display: flex;
     gap: 20px;
@@ -273,6 +349,15 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+<<<<<<< HEAD
+=======
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subscription-plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 
 .subscription-plan h2 {
@@ -465,6 +550,80 @@ h4 {
     50% { opacity: 0.6; transform: scale(1.02); }
 }
 /* تغليف كل شيء داخل login-wrapper */
+<<<<<<< HEAD
+=======
+/* ✅ خلفية مع عناصر متحركة */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* ✅ الفقاعات المتحركة */
+.bubble {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: float 10s infinite alternate ease-in-out, glow 3s infinite alternate;
+}
+
+/* 🔥 توزيع الفقاعات في أماكن مختلفة */
+.bubble:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-duration: 12s;
+}
+.bubble:nth-child(2) {
+    top: 50%;
+    left: 70%;
+    animation-duration: 10s;
+}
+.bubble:nth-child(3) {
+    top: 80%;
+    left: 30%;
+    animation-duration: 14s;
+}
+.bubble:nth-child(4) {
+    top: 30%;
+    left: 80%;
+    animation-duration: 11s;
+}
+.bubble:nth-child(5) {
+    top: 60%;
+    left: 10%;
+    animation-duration: 9s;
+}
+.bubble:nth-child(6) {
+    top: 90%;
+    left: 50%;
+    animation-duration: 13s;
+}
+
+/* ✅ تأثير الطفو */
+@keyframes float {
+    from {
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-50px) scale(1.2);
+    }
+}
+
+/* ✅ تأثير اللمعان */
+@keyframes glow {
+    from {
+        background: rgba(255, 255, 255, 0.15);
+    }
+    to {
+        background: rgba(255, 255, 255, 0.3);
+    }
+}
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 
 /* ✅ تصميم خلفية الموقع */
 .login-wrapper {
@@ -542,6 +701,14 @@ h4 {
     background: #2563eb;
 }
 
+<<<<<<< HEAD
+=======
+.login-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 /* ✅ رابط نسيان كلمة المرور */
 .forgot-password {
     display: block;
@@ -611,13 +778,30 @@ h4 {
     border: 1px solid #db4437;
 }
 
+<<<<<<< HEAD
 /* زر جوجل */
+=======
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 .google:hover {
     background: #db4437;
     color: white;
 }
+<<<<<<< HEAD
 
 /* زر فيسبوك */
+=======
+<<<<<<<< HEAD:styles.css
+
+/* ✅ زر فيسبوك */
+.facebook {
+    border: 1px solid #1877f2;
+    background: #1877f2;
+}
+========
+l
+>>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0:public/styles.css
+
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 .facebook:hover {
     background: #1877f2;
     color: white;
@@ -635,7 +819,48 @@ h4 {
         transform: translateY(0);
     }
 }
+<<<<<<< HEAD
 /* ملاحظة: تم دمج وتحسين خلفية الفقاعات المتحركة أعلاه، وإزالة التكرار */
+=======
+/* ✅ خلفية متحركة */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* ✅ فقاعات متحركة */
+.bubble {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(8px);
+    animation: float 12s infinite alternate ease-in-out, glow 4s infinite alternate;
+}
+
+/* ✅ توزيع الفقاعات */
+.bubble:nth-child(1) { top: 10%; left: 20%; animation-duration: 14s; }
+.bubble:nth-child(2) { top: 50%; left: 70%; animation-duration: 11s; }
+.bubble:nth-child(3) { top: 80%; left: 30%; animation-duration: 15s; }
+.bubble:nth-child(4) { top: 30%; left: 80%; animation-duration: 13s; }
+.bubble:nth-child(5) { top: 60%; left: 10%; animation-duration: 9s; }
+
+/* ✅ تأثير الطفو */
+@keyframes float {
+    from { transform: translateY(0) scale(1); }
+    to { transform: translateY(-40px) scale(1.1); }
+}
+
+/* ✅ تأثير اللمعان */
+@keyframes glow {
+    from { background: rgba(255, 255, 255, 0.1); }
+    to { background: rgba(255, 255, 255, 0.3); }
+}
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 
 /* ✅ هيدر الشات */
 .chat-header {
@@ -658,6 +883,7 @@ h4 {
 .chat-container {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     align-items: center;
     height: 85vh;
     justify-content: space-between;
@@ -665,6 +891,203 @@ h4 {
 }
 
 /* ✅ منطقة الرسائل */
+=======
+    height: calc(100vh - 80px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    position: relative;
+    animation: messageAppear 0.3s ease-out;
+}
+
+.message.sent {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.message.received {
+    align-self: flex-start;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    border-bottom-left-radius: 4px;
+}
+
+.message.read::after {
+    content: '✓✓';
+    position: absolute;
+    bottom: -15px;
+    right: 5px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+.message-content {
+    margin-bottom: 4px;
+    word-wrap: break-word;
+}
+
+.message-time {
+    font-size: 11px;
+    opacity: 0.7;
+    text-align: right;
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    border-radius: 0 0 8px 8px;
+}
+
+.message-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.2s;
+    font-size: 14px;
+    resize: none;
+    max-height: 100px;
+    min-height: 44px;
+}
+
+.message-input:focus {
+    border-color: #007bff;
+}
+
+.message-input:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+.send-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.send-button:hover {
+    background-color: #0056b3;
+}
+
+.send-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.typing-indicator {
+    display: none;
+    padding: 10px;
+    font-size: 12px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.connection-status {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    background-color: #dc3545;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.connection-status.connected {
+    background-color: #28a745;
+}
+
+.error-message, .notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out;
+}
+
+.error-message {
+    background-color: #dc3545;
+}
+
+.notification {
+    background-color: #28a745;
+}
+
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+/* Scrollbar styling */
+.message-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.message-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.message-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 .chat-box {
     width: 400px;
     max-width: 90%;
@@ -677,6 +1100,10 @@ h4 {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+<<<<<<< HEAD
+=======
+    scroll-behavior: smooth;
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 
 /* ✅ الرسائل */
@@ -685,13 +1112,21 @@ h4 {
     align-items: center;
     margin-bottom: 15px;
     opacity: 0;
+<<<<<<< HEAD
     animation: fadeIn 0.5s ease-in-out forwards;
+=======
+    animation: messageSlide 0.3s ease;
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 
 /* ✅ رسالة الروبوت */
 .message.bot {
     justify-content: flex-start;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 
 .message.bot img {
@@ -766,9 +1201,65 @@ h4 {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+<<<<<<< HEAD
 .logo{
     margin-right: 135px;
 
+=======
+
+@keyframes messageSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.input-error {
+    color: #c62828;
+    font-size: 12px;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.logo{
+    margin-right: 135px;
+   
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 .back-button {
     position: absolute;
@@ -829,7 +1320,11 @@ h4 {
 .register-title {
     font-size: 24px;
     color: #ffffff;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 
 /* ✅ حقول الإدخال */
@@ -1251,7 +1746,11 @@ input::placeholder {
         align-items: center;
         text-align: center;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
     .footer-links {
         flex-direction: column;
         align-items: center;
@@ -1262,7 +1761,11 @@ input::placeholder {
     text-align: center;
     padding: 40px 20px;
     background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 
 .library-title {
@@ -1342,6 +1845,10 @@ input::placeholder {
     overflow: hidden;
     position: relative;
     background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
+<<<<<<< HEAD
+=======
+    border-radius: 15px;
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 
 .doctors-container {
@@ -1351,7 +1858,11 @@ input::placeholder {
     scroll-behavior: smooth;
     padding-bottom: 25px;
     scrollbar-width: none; /* إخفاء السكروول للمتصفحات الحديثة */
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 
 .doctors-container::-webkit-scrollbar {
@@ -1365,32 +1876,90 @@ input::placeholder {
 .doctor-name {
     font-size: 20px;
     font-weight: bold;
+<<<<<<< HEAD
     color: #ffffff;
+=======
+    color: #2d3748;
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
 }
 
 .doctor-details {
     font-size: 14px;
+<<<<<<< HEAD
     color: #dcdcdc;
+=======
+    color: #4a5568;
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
     margin-top: 5px;
     line-height: 1.6;
 }
 
+<<<<<<< HEAD
+=======
+/* تصميم الأزرار */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-btn:hover {
+    background: #357ABD;
+    transform: scale(1.1);
+}
+
+.prev-btn {
+    left: -30px;
+}
+
+.next-btn {
+    right: -30px;
+}
+
+/* تحسين الـ Responsive */
+@media (max-width: 768px) {
+    .doctor-card {
+        min-width: 280px;
+        max-width: 280px;
+    }
+    .prev-btn, .next-btn {
+        display: none;
+    }
+} 
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
   .section-title {
     text-align: center;
     padding: 20px;
     color: #1e88e5;
   }
+<<<<<<< HEAD
 
   .doctors-section {
     padding: 20px 40px;
   }
 
+=======
+  
+  .doctors-section {
+    padding: 20px 40px;
+  }
+  
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
   .doctors-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 30px;
   }
+<<<<<<< HEAD
 
   .doctor-card {
     background: #181f2a;
@@ -1545,3 +2114,62 @@ input::placeholder {
     border-radius: 4px;
     background-color: #d4edda;
 }
+=======
+  
+  .doctor-card {
+    background: #0c0c0c;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 430px;
+    height: 330px;
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .doctor-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .doctor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .doctor-card h3 {
+    margin: 10px 0 5px;
+    color: #0288d1;
+  }
+  
+  .specialty {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .experience,
+  .availability {
+    font-size: 0.9em;
+    color: #777;
+    margin: 5px 0;
+  }
+  
+  .book-btn {
+    margin-top: 10px;
+    background-color: #43a047;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .book-btn:hover {
+    background-color: #388e3c;
+  }
+  
+  
+>>>>>>> 196e54b195cb7032b61bb9d291fc729b52faf9c0
