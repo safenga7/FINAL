@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата успешна | Рядом</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <div class="payment-status-container">
+        <div class="status-card success">
+            <img src="images/success-check.svg" alt="Success" class="status-icon">
+            <h2>Оплата прошла успешно!</h2>
+            <p>Ваша подписка активирована. Теперь вы можете использовать все возможности платформы.</p>
+            <div class="button-group">
+                <button onclick="window.location.href='AI.html'" class="primary-button">Начать чат</button>
+                <button onclick="window.location.href='index.html'" class="secondary-button">На главную</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const sessionId = urlParams.get('session_id');
+            
+            if (sessionId) {
+                try {
+                    const response = await fetch(`/api/payments/verify-subscription?session_id=${sessionId}`, {
+                        headers: {
+                            'Authorization': `Bearer ${localStorage.getItem('token')}`
+                        }
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (!data.success) {
+                        window.location.href = 'payment-failed.html';
+                    }
+                } catch (error) {
+                    console.error('Error verifying payment:', error);
+                    window.location.href = 'payment-failed.html';
+                }
+            } else {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

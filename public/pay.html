@@ -4,18 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оплата | Рядом</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pay-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
 </head>
 <body>
-
     <a href="index.html" class="back-button">⬅ Вернуться</a>
+
     <div class="payment-wrapper">
         <div class="payment-container">
             <h2 class="payment-title">Оплата</h2>
 
-            <form action="#" method="post">
+            <div class="payment-summary">
+                <h3>Пакет Надежда</h3>
+                <p class="plan-price">650 ₽ / месяц</p>
+                <p class="plan-description">4 видео/аудио сессии в месяц</p>
+                <a href="index.html#subscription" class="change-plan">Изменить план</a>
+            </div>
+
+            <div class="payment-methods">
+                <div class="payment-method active">
+                    <input type="radio" id="visa" name="payment-method" checked>
+                    <label for="visa">
+                        <i class="fab fa-cc-visa"></i>
+                        Visa
+                    </label>
+                </div>
+
+                <div class="payment-method">
+                    <input type="radio" id="mastercard" name="payment-method">
+                    <label for="mastercard">
+                        <i class="fab fa-cc-mastercard"></i>
+                        MasterCard
+                    </label>
+                </div>
+
+                <div class="payment-method">
+                    <input type="radio" id="paypal" name="payment-method">
+                    <label for="paypal">
+                        <i class="fab fa-paypal"></i>
+                        PayPal
+                    </label>
+                </div>
+
+                <div class="payment-method">
+                    <input type="radio" id="mir" name="payment-method">
+                    <label for="mir">
+                        <i class="fas fa-credit-card"></i>
+                        МИР
+                    </label>
+                </div>
+            </div>
+
+            <form id="paymentForm" action="#" method="post">
                 <label for="name">Имя владельца карты</label>
                 <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
 
@@ -33,20 +73,56 @@
                     </div>
                 </div>
 
-                <label for="payment-method">Способ оплаты</label>
-                <select id="payment-method" name="payment-method">
-                    <option value="visa">Visa</option>
-                    <option value="mastercard">MasterCard</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="mir">МИР</option>
-                </select>
+                <div class="payment-total">
+                    <div class="total-row">
+                        <span>Подписка (ежемесячно)</span>
+                        <span>650 ₽</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Налог</span>
+                        <span>0 ₽</span>
+                    </div>
+                    <div class="total-row total">
+                        <span>Итого сегодня</span>
+                        <span>650 ₽</span>
+                    </div>
+                </div>
 
                 <button type="submit" class="pay-button">Оплатить</button>
+
+                <p class="payment-terms">
+                    Нажимая кнопку "Оплатить", вы соглашаетесь с нашими <a href="#">Условиями использования</a> и подтверждаете, что прочитали нашу <a href="#">Политику конфиденциальности</a>.
+                </p>
             </form>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Оплата успешно выполнена! Спасибо за подписку.');
+            window.location.href = 'AI.html';
+        });
 
+<<<<<<< HEAD
+        // Add click event listeners to payment method options
+        document.querySelectorAll('.payment-method').forEach(method => {
+            method.addEventListener('click', function() {
+                // Remove active class from all methods
+                document.querySelectorAll('.payment-method').forEach(m => {
+                    m.classList.remove('active');
+                });
+                // Add active class to clicked method
+                this.classList.add('active');
+                // Check the radio button
+                this.querySelector('input[type="radio"]').checked = true;
+            });
+        });
+    </script>
 </body>
 </html>
+=======
+</body>
+</html>
+>>>>>>> fc45e6ee12f2260aa6c63c88ffc03bdd28227c8e

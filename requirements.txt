@@ -1,0 +1,10 @@
+flask==2.3.3
+flask-cors==4.0.0
+transformers==4.49.0
+torch==2.6.0
+python-dotenv==1.0.0
+requests==2.31.0
+numpy==2.2.3
+tqdm==4.65.0
+protobuf==4.24.0
+accelerate==0.21.0

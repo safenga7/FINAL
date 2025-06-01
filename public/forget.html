@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Забыли пароль? | Рядом</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forget-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
 </head>
 <body>
     <a href="index.html" class="back-button">⬅ Вернуться</a>
@@ -18,16 +17,42 @@
             </div>
             <h2 class="forgot-title">Восстановление пароля</h2>
             <p class="forgot-text">Введите вашу почту или номер телефона, и мы отправим вам код подтверждения.</p>
-            
-            <form action="#" method="post">
-                <input type="text" class="forgot-input" placeholder="Email или телефон" required>
+
+            <form id="forgotPasswordForm" action="#" method="post">
+                <input type="text" id="email" name="email" class="forgot-input" placeholder="Email или телефон" required>
                 <button type="submit" class="forgot-button">Отправить код</button>
             </form>
-            
+
             <a href="login.html" class="back-to-login">Вспомнили пароль? Войти</a>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById('forgotPasswordForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const submitButton = this.querySelector('button[type="submit"]');
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Отправка...';
+
+            try {
+                // Here you would normally send a request to your server
+                // For now, we'll just simulate a successful response
+                setTimeout(() => {
+                    alert('Код для восстановления пароля отправлен на указанный адрес.');
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Отправить код';
+                }, 1500);
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Произошла ошибка. Пожалуйста, попробуйте позже.');
+                submitButton.disabled = false;
+                submitButton.textContent = 'Отправить код';
+            }
+        });
+    </script>
 </body>
 </html>
