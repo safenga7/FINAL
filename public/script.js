@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function addMessage(text, sender) {
         const messageDiv = document.createElement("div");
-        messageDiv.classList.add("message", sender);
+        messageDiv.classList.add("message", sender, "animate__animated", "animate__fadeIn");
 
         if (sender === "bot") {
             const botImage = document.createElement("img");
@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 function filterContent() {
     let input = document.getElementById("searchInput").value.toLowerCase();
     let items = document.querySelectorAll(".library-item");

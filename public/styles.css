@@ -1,59 +1,20 @@
-
 body {
-    background: linear-gradient(135deg, #0f172a, #0d2054, #1959c0, #074591);
-    background-attachment: fixed;
+    background: linear-gradient(270deg, #0f172a, #1e3a8a, #60a5fa, #0f172a);
+    background-size: 800% 800%;
+    animation: backgroundAnimation 20s ease infinite;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center; 
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     flex-direction: column; 
-    
-}
-.background-element {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    animation: float 10s infinite alternate ease-in-out;
-    filter: blur(10px);
 }
 
-/* مواقع عشوائية للعناصر */
-.background-element:nth-child(1) {
-    top: 10%;
-    left: 20%;
-    animation-duration: 8s;
-}
-.background-element:nth-child(2) {
-    top: 50%;
-    left: 70%;
-    animation-duration: 12s;
-}
-.background-element:nth-child(3) {
-    top: 80%;
-    left: 30%;
-    animation-duration: 10s;
-}
-@keyframes glow {
-    from {
-        background: rgba(255, 255, 255, 0.2);
-    }
-    to {
-        background: rgba(255, 255, 255, 0.1);
-    }
-}
-
-/* تحريك العناصر */
-@keyframes float {
-    from {
-        transform: translateY(0) scale(1);
-    }
-    to {
-        transform: translateY(-50px) scale(1.2);
-    }
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 /* اللوجو */
 header {
@@ -230,6 +191,7 @@ h2 {
 .img-container img {
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     cursor: pointer; /* لجعل المؤشر يظهر كيد عند التحويم */
+    position: relative;
 }
 
 .img-container img:hover {
@@ -237,11 +199,60 @@ h2 {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* ظل جميل */
 }
 
+.img-container a::after {
+    content: "🔗";
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.img-container a:hover::after {
+    opacity: 1;
+}
+
+/* Instruction label for clickable images in Russian */
+.img-container .img-instruction-label {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+    /* Optionally: add text-shadow for better visibility on images */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    pointer-events: none;
+    user-select: none;
+}
+
+
 .A, .B {
     border-radius: 10%;
     height: 400px;
     width: 400px;
     margin: 50px; /* إزالة الهوامش الفردية السابقة */
+}
+h4 {
+    text-align: center;
+    color: #60a5fa; /* أزرق فاتح مناسب للستايل */
+    font-size: 32px; /* تكبير حجم الخط */
+    font-weight: bold;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* ظل خفيف */
+    animation: fadeSlideDown 1.5s ease forwards;
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+@keyframes fadeSlideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .subscription-container {
     display: flex;
@@ -454,77 +465,6 @@ h2 {
     50% { opacity: 0.6; transform: scale(1.02); }
 }
 /* تغليف كل شيء داخل login-wrapper */
-/* ✅ خلفية مع عناصر متحركة */
-.background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-}
-
-/* ✅ الفقاعات المتحركة */
-.bubble {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 50%;
-    filter: blur(10px);
-    animation: float 10s infinite alternate ease-in-out, glow 3s infinite alternate;
-}
-
-/* 🔥 توزيع الفقاعات في أماكن مختلفة */
-.bubble:nth-child(1) {
-    top: 10%;
-    left: 20%;
-    animation-duration: 12s;
-}
-.bubble:nth-child(2) {
-    top: 50%;
-    left: 70%;
-    animation-duration: 10s;
-}
-.bubble:nth-child(3) {
-    top: 80%;
-    left: 30%;
-    animation-duration: 14s;
-}
-.bubble:nth-child(4) {
-    top: 30%;
-    left: 80%;
-    animation-duration: 11s;
-}
-.bubble:nth-child(5) {
-    top: 60%;
-    left: 10%;
-    animation-duration: 9s;
-}
-.bubble:nth-child(6) {
-    top: 90%;
-    left: 50%;
-    animation-duration: 13s;
-}
-
-/* ✅ تأثير الطفو */
-@keyframes float {
-    from {
-        transform: translateY(0) scale(1);
-    }
-    to {
-        transform: translateY(-50px) scale(1.2);
-    }
-}
-
-/* ✅ تأثير اللمعان */
-@keyframes glow {
-    from {
-        background: rgba(255, 255, 255, 0.15);
-    }
-    to {
-        background: rgba(255, 255, 255, 0.3);
-    }
-}
 
 /* ✅ تصميم خلفية الموقع */
 .login-wrapper {
@@ -671,12 +611,13 @@ h2 {
     border: 1px solid #db4437;
 }
 
+/* زر جوجل */
 .google:hover {
     background: #db4437;
     color: white;
 }
-l
 
+/* زر فيسبوك */
 .facebook:hover {
     background: #1877f2;
     color: white;
@@ -694,44 +635,7 @@ l
         transform: translateY(0);
     }
 }
-/* ✅ خلفية متحركة */
-.background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-}
-
-/* ✅ فقاعات متحركة */
-.bubble {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    filter: blur(8px);
-    animation: float 12s infinite alternate ease-in-out, glow 4s infinite alternate;
-}
-
-/* ✅ توزيع الفقاعات */
-.bubble:nth-child(1) { top: 10%; left: 20%; animation-duration: 14s; }
-.bubble:nth-child(2) { top: 50%; left: 70%; animation-duration: 11s; }
-.bubble:nth-child(3) { top: 80%; left: 30%; animation-duration: 15s; }
-.bubble:nth-child(4) { top: 30%; left: 80%; animation-duration: 13s; }
-.bubble:nth-child(5) { top: 60%; left: 10%; animation-duration: 9s; }
-
-/* ✅ تأثير الطفو */
-@keyframes float {
-    from { transform: translateY(0) scale(1); }
-    to { transform: translateY(-40px) scale(1.1); }
-}
-
-/* ✅ تأثير اللمعان */
-@keyframes glow {
-    from { background: rgba(255, 255, 255, 0.1); }
-    to { background: rgba(255, 255, 255, 0.3); }
-}
+/* ملاحظة: تم دمج وتحسين خلفية الفقاعات المتحركة أعلاه، وإزالة التكرار */
 
 /* ✅ هيدر الشات */
 .chat-header {
@@ -1438,7 +1342,6 @@ input::placeholder {
     overflow: hidden;
     position: relative;
     background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
-    border-radius: 15px;
 }
 
 .doctors-container {
@@ -1462,54 +1365,16 @@ input::placeholder {
 .doctor-name {
     font-size: 20px;
     font-weight: bold;
-    color: #2d3748;
+    color: #ffffff;
 }
 
 .doctor-details {
     font-size: 14px;
-    color: #4a5568;
+    color: #dcdcdc;
     margin-top: 5px;
     line-height: 1.6;
 }
 
-/* تصميم الأزرار */
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #4a90e2;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 12px 16px;
-    border-radius: 50%;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.scroll-btn:hover {
-    background: #357ABD;
-    transform: scale(1.1);
-}
-
-.prev-btn {
-    left: -30px;
-}
-
-.next-btn {
-    right: -30px;
-}
-
-/* تحسين الـ Responsive */
-@media (max-width: 768px) {
-    .doctor-card {
-        min-width: 280px;
-        max-width: 280px;
-    }
-    .prev-btn, .next-btn {
-        display: none;
-    }
-} 
   .section-title {
     text-align: center;
     padding: 20px;
@@ -1524,62 +1389,124 @@ input::placeholder {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
   }
   
   .doctor-card {
-    background: #0c0c0c;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 430px;
-    height: 330px;
-    margin: 15px;
+    background: #181f2a;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.16);
+    padding: 30px 24px 24px 24px;
+    width: 350px;
+    min-width: 270px;
+    max-width: 100%;
+    margin: 16px auto;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.25s cubic-bezier(.4,1.3,.5,1), box-shadow 0.25s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
   }
-  
+
   .doctor-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.04) translateY(-6px);
+    box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.23);
   }
-  
+
   .doctor-card img {
-    width: 100px;
-    height: 100px;
+    width: 88px;
+    height: 88px;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid #3b82f6;
+    margin-bottom: 14px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(59,130,246,0.10);
   }
-  
+
   .doctor-card h3 {
-    margin: 10px 0 5px;
-    color: #0288d1;
-  }
-  
-  .specialty {
+    margin: 6px 0 3px 0;
+    color: #3b82f6;
+    font-size: 1.25rem;
     font-weight: bold;
-    color: #555;
+    letter-spacing: 0.5px;
   }
-  
+
+  .specialty {
+    font-weight: 600;
+    color: #facc15;
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
   .experience,
   .availability {
-    font-size: 0.9em;
-    color: #777;
-    margin: 5px 0;
+    font-size: 0.95em;
+    color: #bfc9d8;
+    margin: 4px 0;
   }
-  
+
   .book-btn {
-    margin-top: 10px;
+    margin-top: 15px;
     background-color: #43a047;
     color: #fff;
     border: none;
-    padding: 8px 15px;
+    padding: 10px 22px;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(67,160,71,0.10);
   }
-  
+
   .book-btn:hover {
     background-color: #388e3c;
+    box-shadow: 0 4px 16px rgba(67,160,71,0.17);
   }
-  
+
+/* Responsive تحسين الكروت للشاشات الصغيرة */
+@media (max-width: 1100px) {
+  .doctor-card {
+    width: 90vw;
+    min-width: 220px;
+    max-width: 400px;
+    margin: 14px auto;
+    padding: 24px 10px 18px 10px;
+  }
+}
+@media (max-width: 768px) {
+  .doctors-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .doctor-card {
+    width: 95vw;
+    min-width: 180px;
+    max-width: 99vw;
+    padding: 18px 5vw 16px 5vw;
+    margin: 10px 0;
+  }
+}
+@media (max-width: 480px) {
+  .doctor-card {
+    padding: 10px 2vw 10px 2vw;
+    width: 99vw;
+    min-width: 120px;
+    max-width: 99vw;
+  }
+  .doctor-card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+  }
+  .doctor-card h3 {
+    font-size: 1.05rem;
+  }
+  .specialty {
+    font-size: 0.95rem;
+  }
+}
   
