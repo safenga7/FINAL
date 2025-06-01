@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чат - Рядом</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body><!-- ✅ هيدر الشات -->
+    <header class="chat-header">
+        <div class="logo">
+            <img src="images/icon.png" alt="Рядом">
+            <h1 class="chat-title">РЯДОМ</h1>
+        </div>
+    </header>
+    
+    <!-- ✅ صندوق الدردشة -->
+    <div class="chat-container">
+        <a href="index.html" class="back-button">⬅ Вернуться</a>    <!-- ✅ خلفية متحركة -->
+
+        <div class="chat-box">
+            <div class="message bot">
+                <img src="images/icon.png" alt="Bot">
+                <p>Привет! Как я могу вам помочь?</p>
+            </div>
+        </div>
+    
+        <div class="chat-input">
+            <input type="text" class="message-input" placeholder="Введите сообщение...">
+            <button class="send-button">➤</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
