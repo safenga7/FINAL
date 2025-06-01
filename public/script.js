@@ -60,8 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
             sendMessage();
         }
     });
-});
-
 function filterContent() {
     let input = document.getElementById("searchInput").value.toLowerCase();
     let items = document.querySelectorAll(".library-item");
