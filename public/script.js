@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     function addMessage(text, sender) {
         const messageDiv = document.createElement("div");
-        messageDiv.classList.add("message", sender);
+        messageDiv.classList.add("message", sender, "animate__animated", "animate__fadeIn");
 
         if (sender === "bot") {
             const botImage = document.createElement("img");
@@ -324,6 +324,12 @@ document.addEventListener("DOMContentLoaded", async function () {
             sendMessage();
         }
     });
+<<<<<<< HEAD
+=======
+function filterContent() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let items = document.querySelectorAll(".library-item");
+>>>>>>> fc45e6ee12f2260aa6c63c88ffc03bdd28227c8e
 
     inputField.addEventListener("input", () => {
         sendTypingStatus(true);
