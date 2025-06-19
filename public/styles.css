@@ -4,7 +4,6 @@ body {
     background-repeat: no-repeat;
     background-position: center center; /* تأكد من محاذاة الصورة بشكل صحيح */
     background-attachment: fixed; /* يثبت الخلفية عند التمرير */
-    animation: moveBackground 20s ease-in-out infinite alternate;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -12,7 +11,6 @@ body {
     padding: 0;
     margin: 0;
     flex-direction: column;
-    transition: background-color 0.5s ease;
     /* إزالة z-index من body لأن الخلفية يجب أن تكون في المستوى الافتراضي */
 }
 
@@ -491,25 +489,22 @@ h4 {
 /* تغليف كل شيء داخل login-wrapper */
 
 /* ✅ تصميم خلفية الموقع */
-.login-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
-    font-family: Arial, sans-serif;
-}
+
 
 /* ✅ تصميم صندوق تسجيل الدخول */
 .login-container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.15); /* خلفية شفافة أكتر */
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 350px;
-    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(15px); /* تأثير الضبابية */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25); /* إطار شفاف */
     animation: fadeIn 1s ease-in-out;
+    margin-top: 35px;
 }
 
 /* ✅ الشعار */
@@ -521,9 +516,10 @@ h4 {
 
 /* ✅ العنوان */
 .login-title {
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 20px;
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 25px;
 }
 
 /* ✅ حقول الإدخال */
@@ -659,7 +655,7 @@ h4 {
         transform: translateY(0);
     }
 }
-/* ملاحظة: تم دمج وتحسين خلفية الفقاعات المتحركة أعلاه، وإزالة التكرار */
+
 
 /* ✅ هيدر الشات */
 .chat-header {
@@ -824,19 +820,8 @@ h4 {
     margin-top: 140px;
 }
 
-.backk-button:hover {
-    background-color: #2980b9;
-}
-/* ✅ تصميم صفحة التسجيل */
-.register-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
-    font-family: Arial, sans-serif;
-}
 
+/* ✅ تصميم صفحة التسجيل */
 /* ✅ صندوق التسجيل */
 .register-container {
     background: rgba(255, 255, 255, 0.1);
@@ -865,7 +850,7 @@ h4 {
     border-radius: 5px;
     font-size: 16px;
     background: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    color: #ffffff;
     transition: 0.3s;
     outline: none;
 }
@@ -976,15 +961,6 @@ h4 {
     color: white;
 }
 /* ✅ خلفية الصفحة */
-.forgot-password-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #60a5fa);
-    font-family: Arial, sans-serif;
-}
-
 /* ✅ تصميم صندوق الاستعادة */
 .forgot-password-container {
     background: rgba(255, 255, 255, 0.1);
@@ -995,6 +971,7 @@ h4 {
     width: 350px;
     backdrop-filter: blur(10px);
     animation: fadeIn 1s ease-in-out;
+    margin-top: 130px;
 }
 
 /* ✅ الشعار */
@@ -1551,7 +1528,6 @@ body {
     background-repeat: no-repeat;
     background-position: center center; /* تأكد من محاذاة الصورة بشكل صحيح */
     background-attachment: fixed; /* يثبت الخلفية عند التمرير */
-    animation: moveBackground 20s ease-in-out infinite alternate;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -1559,7 +1535,7 @@ body {
     padding: 0;
     margin: 0;
     flex-direction: column;
-    transition: background-color 0.5s ease;
+    
     /* إزالة z-index من body لأن الخلفية يجب أن تكون في المستوى الافتراضي */
 }
 
@@ -2213,9 +2189,7 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 /* ✅ عنوان الشات */
@@ -2237,15 +2211,14 @@ h4 {
 
 /* ✅ منطقة الرسائل */
 .chat-box {
-    width: 400px;
-    max-width: 90%;
-    height: 500px;
+    width: 350px;
+    max-width:90%;
+    height: 400px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     padding: 20px;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -2254,7 +2227,6 @@ h4 {
 .message {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out forwards;
 }
@@ -2297,7 +2269,7 @@ h4 {
     display: flex;
     width: 400px;
     max-width: 90%;
-    margin-top: 15px;
+    margin-bottom: 80px;
 }
 
 .message-input {
@@ -2319,13 +2291,14 @@ h4 {
 .send-button {
     background: #3b82f6;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     padding: 12px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 8px;
     transition: 0.3s;
+    height: 40px;
 }
 
 .send-button:hover {
@@ -3031,6 +3004,7 @@ input::placeholder {
     font-weight: 600;
     transition: background-color 0.3s, box-shadow 0.2s;
     box-shadow: 0 2px 8px rgba(67,160,71,0.10);
+    text-decoration: none;
   }
 
   .book-btn:hover {
@@ -3091,4 +3065,74 @@ input::placeholder {
 .scroll-effect.visible {
   opacity: 1;
   transform: translateY(0);
+}
+.confirmation-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    max-width: 90%;
+    margin-top: 130px;
+}
+
+.confirmation-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.confirmation-box label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #f0f0f0;
+}
+
+.confirmation-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 5px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+}
+
+.confirmation-box input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.confirmation-box button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b82f6;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.confirmation-box button:hover {
+    background-color: #2563eb;
+}
+.confirmation-message {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 350px;
+    max-width: 90%;
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
 }
