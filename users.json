@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "amr",
+    "email": "mo7880@gmail.com",
+    "password": "123456789",
+    "role": "user",
+    "subscriptionStatus": "active",
+    "sessionsRemaining": 10
+  },
+  {
+    "id": 2,
+    "name": "Mohamed",
+    "email": "mo78@gmail.com",
+    "password": "Mo.2025",
+    "phone": "+7929958-82-41",
+    "gender": "male",
+    "birthdate": "2002-06-06",
+    "role": "user",
+    "subscriptionStatus": "active",
+    "sessionsRemaining": 10
+  }
+]

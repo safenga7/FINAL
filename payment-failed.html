@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ошибка оплаты | Рядом</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <div class="payment-status-container">
+        <div class="status-card error">
+            <img src="images/error-x.svg" alt="Error" class="status-icon">
+            <h2>Ошибка оплаты</h2>
+            <p>К сожалению, во время обработки платежа произошла ошибка. Пожалуйста, попробуйте еще раз.</p>
+            <div class="button-group">
+                <button onclick="window.location.href='index.html#subscription'" class="primary-button">Попробовать снова</button>
+                <button onclick="window.history.back()" class="secondary-button">Назад</button>
+            </div>
+            <p class="support-text">Если проблема повторяется, пожалуйста, <a href="mailto:support@ryadom.com">свяжитесь с поддержкой</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
